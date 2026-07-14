@@ -151,7 +151,7 @@ export default function Hero() {
               <div className="overflow-hidden rounded-[42px] border-[10px] border-[#0F172A] bg-black shadow-[0_50px_120px_rgba(15,23,42,.25)]">
 
                 <Image
-                  src="/images/dashboard.png"
+                  src="/images/dashboard.webp"
                   alt="Relocate+ Dashboard"
                   width={390}
                   height={844}

@@ -48,7 +48,7 @@ export default function Progress() {
 
           <div className="flex justify-center">
             <AppFrame
-              src="/images/progress.png"
+              src="/images/progress.webp"
               alt="Relocate+ Progress Tracking"
             />
           </div>

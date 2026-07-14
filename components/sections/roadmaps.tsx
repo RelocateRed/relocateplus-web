@@ -12,7 +12,7 @@ export default function Roadmaps() {
         <div className="grid items-center gap-20 lg:grid-cols-2">
           <div className="order-2 lg:order-1 flex justify-center">
             <AppFrame
-              src="/images/roadmap.png"
+              src="/images/roadmap.webp"
               alt="Relocate+ Roadmap"
             />
           </div>

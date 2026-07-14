@@ -50,7 +50,7 @@ export default function Documents() {
 
           <div className="flex justify-center">
             <AppFrame
-              src="/images/documents.png"
+              src="/images/documents.webp"
               alt="Relocate+ Documents"
             />
           </div>

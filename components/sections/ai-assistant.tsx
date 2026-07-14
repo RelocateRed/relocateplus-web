@@ -12,7 +12,7 @@ export default function AiAssistant() {
         <div className="grid items-center gap-20 lg:grid-cols-2">
           <div className="order-2 flex justify-center lg:order-1">
             <AppFrame
-              src="/images/ai.png"
+              src="/images/ai.webp"
               alt="Relocate+ AI Assistant"
             />
           </div>
