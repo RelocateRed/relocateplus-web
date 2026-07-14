@@ -27,7 +27,7 @@ export default function Hero() {
 
       <Container>
 
-        <div className="relative grid min-h-[92vh] items-center gap-28 py-28 lg:grid-cols-[1.05fr_.95fr]">
+        <div className="relative grid min-h-screen items-center gap-16 py-24 lg:min-h-[92vh] lg:gap-28 lg:py-28 lg:grid-cols-[1.05fr_.95fr]">
 
           {/* LEFT */}
 
@@ -41,7 +41,7 @@ export default function Hero() {
               RELOCATE+
             </p>
 
-            <Heading className="mt-6">
+            <Heading className="mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
 
               Plan your move.
 
@@ -59,7 +59,7 @@ export default function Hero() {
 
             </Heading>
 
-            <Text className="mt-8 max-w-xl text-xl leading-9">
+            <Text className="mt-8 max-w-xl text-lg leading-8 lg:text-xl lg:leading-9">
 
               Plan every step of your international relocation with confidence.
               Organize your documents, follow a personalized roadmap,
@@ -67,7 +67,7 @@ export default function Hero() {
 
             </Text>
 
-            <div className="mt-12 flex flex-wrap gap-5">
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
 
               <Button>
                 Download on the App Store
@@ -150,7 +150,8 @@ export default function Hero() {
                   width={390}
                   height={844}
                   priority
-                  className="h-auto w-[340px]"
+                  className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
 
               </div>

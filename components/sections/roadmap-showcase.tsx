@@ -119,12 +119,13 @@ export default function RoadmapShowcase() {
             <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-white shadow-[0_40px_120px_rgba(15,23,42,.08)]">
 
               <Image
-                src="/images/roadmap.png"
-                alt="Relocate+ Roadmap"
-                width={900}
-                height={900}
-                className="w-full"
-              />
+               src="/images/roadmap.png"
+               alt="Relocate+ Roadmap"
+               width={600}
+               height={600}
+               className="w-full"
+               sizes="(max-width: 768px) 100vw, 600px"
+             />
 
             </div>
 

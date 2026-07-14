@@ -118,12 +118,13 @@ export default function ProgressShowcase() {
             <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-white shadow-[0_40px_120px_rgba(15,23,42,.08)]">
 
               <Image
-                src="/images/progress.png"
-                alt="Relocate+ Progress"
-                width={900}
-                height={900}
-                className="w-full"
-              />
+               src="/images/progress.png"
+               alt="Relocate+ Progress"
+               width={600}
+               height={600}
+               className="w-full"
+               sizes="(max-width: 768px) 100vw, 600px"
+             />
 
             </div>
 
