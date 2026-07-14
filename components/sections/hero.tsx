@@ -29,96 +29,102 @@ export default function Hero() {
 
         <div className="relative grid min-h-screen items-center gap-16 py-24 lg:min-h-[92vh] lg:gap-28 lg:py-28 lg:grid-cols-[1.05fr_.95fr]">
 
-          {/* LEFT */}
+{/* LEFT */}
 
-          <FadeIn className="relative z-20 max-w-2xl">
+<div className="relative z-20 max-w-2xl">
 
-            <Badge>
-              Trusted by future expats in 190+ countries
-            </Badge>
+  <FadeIn>
+    <Badge>
+      Trusted by future expats in 190+ countries
+    </Badge>
+  </FadeIn>
 
-            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
-              RELOCATE+
-            </p>
+  <p className="mt-8 text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+    RELOCATE+
+  </p>
 
-            <Heading className="mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
+  <Heading className="mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
 
-              Plan your move.
+    Plan your move.
 
-              <br />
+    <br />
 
-              <span className="text-[#2563EB]">
+    <span className="text-[#2563EB]">
 
-                Stress less.
+      Stress less.
 
-              </span>
+    </span>
 
-              <br />
+    <br />
 
-              Move smarter.
+    Move smarter.
 
-            </Heading>
+  </Heading>
 
-            <Text className="mt-8 max-w-xl text-lg leading-8 lg:text-xl lg:leading-9">
+  <FadeIn delay={0.1}>
 
-              Plan every step of your international relocation with confidence.
-              Organize your documents, follow a personalized roadmap,
-              track your progress and always know exactly what comes next.
+    <Text className="mt-8 max-w-xl text-lg leading-8 lg:text-xl lg:leading-9">
 
-            </Text>
+      Plan every step of your international relocation with confidence.
+      Organize your documents, follow a personalized roadmap,
+      track your progress and always know exactly what comes next.
 
-            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+    </Text>
 
-              <Button>
-                Download on the App Store
-              </Button>
+    <div className="mt-12 flex flex-col gap-4 sm:flex-row">
 
-              <Button
-                variant="secondary"
-                href="#app-showcase"
-              >
-                Explore the app
-              </Button>
+      <Button>
+        Download on the App Store
+      </Button>
 
-            </div>
+      <Button
+        variant="secondary"
+        href="#app-showcase"
+      >
+        Explore the app
+      </Button>
 
-            <div className="mt-16 flex items-center gap-8">
+    </div>
 
-              <div className="flex -space-x-3">
+    <div className="mt-16 flex items-center gap-8">
 
-                <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-300" />
+      <div className="flex -space-x-3">
 
-                <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-400" />
+        <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-300" />
 
-                <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-500" />
+        <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-400" />
 
-                <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#2563EB] text-sm font-bold text-white">
+        <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-500" />
 
-                  +
+        <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#2563EB] text-sm font-bold text-white">
 
-                </div>
+          +
 
-              </div>
+        </div>
 
-              <div>
+      </div>
 
-                <div className="text-lg text-[#2563EB]">
+      <div>
 
-                  ★★★★★
+        <div className="text-lg text-[#2563EB]">
 
-                </div>
+          ★★★★★
 
-                <p className="text-sm text-slate-500">
+        </div>
 
-                  Trusted by future expats worldwide
+        <p className="text-sm text-slate-500">
 
-                </p>
+          Trusted by future expats worldwide
 
-              </div>
+        </p>
 
-            </div>
+      </div>
 
-          </FadeIn>
+    </div>
+
+  </FadeIn>
+
+</div>
 
           {/* RIGHT */}
 
