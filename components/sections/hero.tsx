@@ -151,14 +151,14 @@ export default function Hero() {
               <div className="overflow-hidden rounded-[42px] border-[10px] border-[#0F172A] bg-black shadow-[0_50px_120px_rgba(15,23,42,.25)]">
 
                 <Image
-                  src="/images/dashboard.webp"
-                  alt="Relocate+ Dashboard"
-                  width={390}
-                  height={844}
-                  priority
-                  className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
-                  sizes="(max-width: 768px) 100vw, 800px"
-                />
+                src="/images/dashboard.webp"
+                alt="Relocate+ Dashboard"
+                width={390}
+                height={844}
+                priority
+                className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
+                sizes="(max-width: 768px) 100vw, 800px"
+               />
 
               </div>
 
