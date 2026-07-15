@@ -1,7 +1,11 @@
+import Navbar from "@/components/layout/navbar";
+import Hero from "@/components/sections/hero";
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-5xl font-bold">Relocate+</h1>
-    </main>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 }
