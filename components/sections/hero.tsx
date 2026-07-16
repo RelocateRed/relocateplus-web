@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <Section className="relative overflow-hidden bg-[#FAFBFF]">
 
-      {/* Background — reduced blur values for faster paint */}
+      {/* Background — hidden on mobile, visible on desktop */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute left-1/2 top-[-420px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
         <div className="absolute -left-44 top-48 h-[420px] w-[420px] rounded-full bg-sky-300/15 blur-[100px]" />
@@ -81,7 +81,7 @@ export default function Hero() {
           {/* RIGHT — single FadeIn, no nesting */}
           <FadeIn delay={0.15} className="relative flex justify-center">
 
-            {/* Glow */}
+            {/* Glow — desktop only */}
             <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
               <div className="h-[520px] w-[520px] rounded-full bg-blue-500/10 blur-[80px]" />
             </div>
