@@ -13,17 +13,35 @@ export default function Hero() {
   return (
     <Section className="relative overflow-hidden bg-[#FAFBFF]">
 
-      {/* Background — hidden on mobile, visible on desktop */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute left-1/2 top-[-420px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px]" />
-        <div className="absolute -left-44 top-48 h-[420px] w-[420px] rounded-full bg-sky-300/15 blur-[100px]" />
-        <div className="absolute -right-52 bottom-0 h-[520px] w-[520px] rounded-full bg-blue-300/15 blur-[100px]" />
+      {/* Background — pure CSS gradients, zero blur filters, instant paint */}
+      <div className="absolute inset-0" aria-hidden="true">
+        {/* Soft radial glow behind content — gradient, not blur */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(1100px 600px at 70% 20%, rgba(37,99,235,0.09), transparent 60%), radial-gradient(800px 500px at 10% 80%, rgba(125,211,252,0.10), transparent 55%)",
+          }}
+        />
+        {/* Subtle grid texture — premium detail, costs nothing */}
+        <div
+          className="absolute inset-0 opacity-[0.35]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(15,23,42,0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.035) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+            maskImage:
+              "radial-gradient(ellipse 90% 70% at 50% 35%, black 40%, transparent 100%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 90% 70% at 50% 35%, black 40%, transparent 100%)",
+          }}
+        />
       </div>
 
       <Container>
         <div className="relative grid min-h-[92vh] items-center gap-16 py-24 lg:gap-28 lg:py-28 lg:grid-cols-[1.05fr_.95fr]">
 
-          {/* LEFT — heading renders immediately, rest fades in */}
+          {/* LEFT */}
           <div className="relative z-20 max-w-2xl">
 
             <FadeIn>
@@ -36,10 +54,12 @@ export default function Hero() {
               RELOCATE+
             </p>
 
-            <Heading className="mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
+            <Heading className="mt-6 text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">
               Plan your move.
               <br />
-              <span className="text-[#2563EB]">Stress less.</span>
+              <span className="bg-gradient-to-r from-[#2563EB] to-[#38BDF8] bg-clip-text text-transparent">
+                Stress less.
+              </span>
               <br />
               Move smarter.
             </Heading>
@@ -78,30 +98,42 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT — single FadeIn, no nesting */}
+          {/* RIGHT */}
           <FadeIn delay={0.15} className="relative flex justify-center">
 
-            {/* Glow — desktop only */}
-            <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-              <div className="h-[520px] w-[520px] rounded-full bg-blue-500/10 blur-[80px]" />
+            {/* Glow behind phone — gradient ring, desktop only */}
+            <div
+              className="absolute inset-0 hidden items-center justify-center lg:flex"
+              aria-hidden="true"
+            >
+              <div
+                className="h-[560px] w-[560px] rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(37,99,235,0.14) 0%, rgba(37,99,235,0.05) 45%, transparent 70%)",
+                }}
+              />
             </div>
 
-            {/* Phone — renders immediately inside the single FadeIn */}
+            {/* Phone */}
             <div className="relative z-20">
-              <div className="overflow-hidden rounded-[42px] border-[10px] border-[#0F172A] bg-black shadow-[0_50px_120px_rgba(15,23,42,.25)]">
-                <Image
-                  src="/images/dashboard.webp"
-                  alt="Relocate+ app dashboard showing relocation roadmap"
-                  width={390}
-                  height={844}
-                  priority
-                  className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
-                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
-                />
+              {/* Gradient ring border around phone — premium detail */}
+              <div className="rounded-[46px] bg-gradient-to-b from-slate-200 via-white to-slate-300 p-[3px] shadow-[0_50px_120px_rgba(15,23,42,.22)]">
+                <div className="overflow-hidden rounded-[43px] border-[9px] border-[#0F172A] bg-black">
+                  <Image
+                    src="/images/dashboard.webp"
+                    alt="Relocate+ app dashboard showing relocation roadmap"
+                    width={390}
+                    height={844}
+                    priority
+                    className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
+                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Roadmap Card — no FadeIn, renders with parent */}
+            {/* Floating cards — desktop only, no changes to content */}
             <div className="absolute -left-12 top-12 z-30 hidden w-60 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl">
@@ -114,7 +146,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Documents Card */}
             <div className="absolute -right-10 top-40 z-30 hidden w-64 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
               <p className="text-sm font-semibold text-slate-900">Documents</p>
               <div className="mt-4 space-y-3">
@@ -133,16 +164,14 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Progress Card */}
             <div className="absolute -left-8 bottom-28 z-30 hidden w-56 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
               <p className="text-sm font-semibold text-slate-900">Progress</p>
               <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100">
-                <div className="h-full w-[68%] rounded-full bg-[#2563EB]" />
+                <div className="h-full w-[68%] rounded-full bg-gradient-to-r from-[#2563EB] to-[#38BDF8]" />
               </div>
               <p className="mt-3 text-sm text-slate-500">You're making great progress.</p>
             </div>
 
-            {/* AI Card */}
             <div className="absolute -right-8 bottom-10 z-30 hidden w-64 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
               <div className="flex items-start gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
