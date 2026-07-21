@@ -121,7 +121,7 @@ export default function Hero() {
               <div className="rounded-[46px] bg-gradient-to-b from-slate-200 via-white to-slate-300 p-[3px] shadow-[0_50px_120px_rgba(15,23,42,.22)]">
                 <div className="overflow-hidden rounded-[43px] border-[9px] border-[#0F172A] bg-black">
                   <Image
-                    src="/images/dashboard.webp"
+                    src="/images/dashboard-v2.webp"
                     alt="Relocate+ app dashboard showing relocation roadmap"
                     width={390}
                     height={844}
