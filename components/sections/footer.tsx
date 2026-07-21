@@ -46,33 +46,33 @@ export default function Footer() {
 
           {/* Product */}
 
-          <div>
+<div>
 
-            <h3 className="font-semibold text-slate-900">
-              Product
-            </h3>
+  <h3 className="font-semibold text-slate-900">
+    Product
+  </h3>
 
-            <div className="mt-6 flex flex-col gap-4">
+  <div className="mt-6 flex flex-col gap-4">
 
-              <Link href="#" className="text-slate-600 hover:text-[#2563EB] duration-300">
-                Features
-              </Link>
+    <a href="#why-relocate" className="text-slate-600 hover:text-[#2563EB] duration-300">
+      Features
+    </a>
 
-              <Link href="#" className="text-slate-600 hover:text-[#2563EB] duration-300">
-                Roadmaps
-              </Link>
+    <a href="#roadmaps" className="text-slate-600 hover:text-[#2563EB] duration-300">
+      Roadmaps
+    </a>
 
-              <Link href="#" className="text-slate-600 hover:text-[#2563EB] duration-300">
-                Documents
-              </Link>
+    <a href="#documents" className="text-slate-600 hover:text-[#2563EB] duration-300">
+      Documents
+    </a>
 
-              <Link href="#" className="text-slate-600 hover:text-[#2563EB] duration-300">
-                AI Assistant
-              </Link>
+    <a href="#ai" className="text-slate-600 hover:text-[#2563EB] duration-300">
+      AI Assistant
+    </a>
 
-            </div>
+  </div>
 
-          </div>
+</div>
 
           {/* Company */}
 
