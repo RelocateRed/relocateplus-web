@@ -64,7 +64,7 @@ export default function ContactPage() {
               </p>
 
               <p className="mt-8 font-semibold text-[#2563EB]">
-                info@relocate-plus.com
+                support@relocate-plus.com
               </p>
 
             </div>

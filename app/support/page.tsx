@@ -129,7 +129,7 @@ export default function SupportPage() {
               </p>
 
               <p className="mt-4 text-2xl font-semibold text-[#2563EB]">
-                info@relocate-plus.com
+                support@relocate-plus.com
               </p>
 
               <p className="mt-6 text-slate-600">
