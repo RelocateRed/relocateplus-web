@@ -126,11 +126,12 @@ export default async function SharedRoadmapPage({
             Planning your own move? Get a personalised roadmap in minutes.
           </p>
           <Link
-            href="/"
-            className="inline-block bg-[#0C1A2E] text-white font-semibold px-8 py-3.5 rounded-2xl hover:bg-[#12233F] transition"
-          >
-            Try Relocate+ free →
-          </Link>
+  href="/"
+  className="inline-block bg-[#0C1A2E] font-semibold px-8 py-3.5 rounded-2xl hover:bg-[#12233F] transition"
+  style={{ color: '#ffffff' }}
+>
+  Try Relocate+ free →
+</Link>
         </div>
 
       </div>
