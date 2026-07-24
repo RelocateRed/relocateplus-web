@@ -3,6 +3,8 @@ import Hero from "@/components/sections/hero";
 import WhyRelocate from "@/components/sections/why-relocate";
 import RoadmapShowcase from "@/components/sections/roadmap-showcase";
 import DocumentsShowcase from "@/components/sections/documents-showcase";
+import BudgetShowcase from "@/components/sections/budget-showcase";
+import FamilyShowcase from "@/components/sections/family-showcase";
 import ProgressShowcase from "@/components/sections/progress-showcase";
 import AIShowcase from "@/components/sections/ai-showcase";
 import DownloadCTA from "@/components/sections/download-cta";
@@ -17,6 +19,8 @@ export default function HomePage() {
       <WhyRelocate />
       <RoadmapShowcase />
       <DocumentsShowcase />
+      <BudgetShowcase />
+      <FamilyShowcase />
       <ProgressShowcase />
       <AIShowcase />
       <DownloadCTA />
