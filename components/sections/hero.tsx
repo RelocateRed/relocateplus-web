@@ -46,7 +46,7 @@ export default function Hero() {
 
             <FadeIn>
               <Badge>
-                Trusted by future expats in 190+ countries
+                Wherever you're moving, we've got you covered
               </Badge>
             </FadeIn>
 
@@ -80,19 +80,9 @@ export default function Hero() {
                 </Button>
               </div>
 
-              <div className="mt-16 flex items-center gap-8">
-                <div className="flex -space-x-3">
-                  <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-300" />
-                  <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-400" />
-                  <div className="h-11 w-11 rounded-full border-2 border-white bg-slate-500" />
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#2563EB] text-sm font-bold text-white">
-                    +
-                  </div>
-                </div>
-                <div>
-                  <div className="text-lg text-[#2563EB]">★★★★★</div>
-                  <p className="text-sm text-slate-500">Trusted by future expats worldwide</p>
-                </div>
+              <div className="mt-16 flex items-center gap-3">
+                <div className="text-lg text-[#2563EB]">★★★★★</div>
+                <p className="text-sm text-slate-500">Trusted by future expats worldwide</p>
               </div>
             </FadeIn>
 

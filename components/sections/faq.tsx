@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Is Relocate+ free?",
     answer:
-      "Relocate+ offers a free experience with optional premium features for users who want even more personalized support.",
+      "Relocate+ is free to start — build your personalized roadmap and complete your first few tasks at no cost. A Pro subscription unlocks your complete roadmap, full document vault, and AI assistant.",
   },
 ];
 export default function FAQ() {

@@ -83,6 +83,10 @@ export const metadata: Metadata = {
     icon: "/icon.png",
     apple: "/apple-icon.png",
   },
+
+  other: {
+    "apple-itunes-app": "app-id=6789252666",
+  },
 };
 
 export default function RootLayout({

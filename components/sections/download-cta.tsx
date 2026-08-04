@@ -40,14 +40,14 @@ export default function DownloadCTA() {
 
             <Text className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-slate-300">
 
-              Join thousands of future expats who are planning
+              Join future expats who are planning
               their move with confidence using Relocate+.
 
             </Text>
 
             <div className="mt-14 flex flex-wrap justify-center gap-5">
 
-              <Button href="#">
+              <Button href="https://apps.apple.com/nl/app/relocate/id6789252666">
                 Download on the App Store
               </Button>
 
