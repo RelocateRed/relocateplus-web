@@ -106,7 +106,7 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
 
-            <Button href="#download">
+            <Button href="https://apps.apple.com/app/relocate-plus/id6789252666">
               Download
             </Button>
 

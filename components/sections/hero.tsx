@@ -72,7 +72,7 @@ export default function Hero() {
               </Text>
 
               <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-                <Button>
+                <Button href="https://apps.apple.com/app/relocate-plus/id6789252666">
                   Download on the App Store
                 </Button>
                 <Button variant="secondary" href="#app-showcase">
