@@ -61,8 +61,20 @@ export default function ResetPasswordPage() {
           return;
         }
 
-        // Check the URL fragment for access_token (implicit flow)
+        // Check the URL fragment for an error first (e.g. expired link)
         const hash = typeof window !== "undefined" ? window.location.hash : "";
+        if (hash.includes("error=")) {
+          const hashParams = new URLSearchParams(hash.substring(1));
+          const errorDescription = hashParams.get("error_description");
+          setSessionError(
+            errorDescription
+              ? decodeURIComponent(errorDescription.replace(/\+/g, " "))
+              : "This reset link is invalid or has expired. Please request a new one."
+          );
+          return;
+        }
+
+        // Check the URL fragment for access_token (implicit flow)
         if (hash.includes("access_token")) {
           const hashParams = new URLSearchParams(hash.substring(1));
           const accessToken = hashParams.get("access_token");
