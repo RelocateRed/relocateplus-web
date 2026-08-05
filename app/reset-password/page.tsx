@@ -40,6 +40,8 @@ export default function ResetPasswordPage() {
   useEffect(() => {
     (async () => {
       try {
+        // Supabase can send the token either as query params (?code=...)
+        // or as a URL fragment (#access_token=...) depending on flow type.
         const code = searchParams.get("code");
         const tokenHash = searchParams.get("token_hash");
 
@@ -57,6 +59,24 @@ export default function ResetPasswordPage() {
           if (error) throw error;
           setSessionReady(true);
           return;
+        }
+
+        // Check the URL fragment for access_token (implicit flow)
+        const hash = typeof window !== "undefined" ? window.location.hash : "";
+        if (hash.includes("access_token")) {
+          const hashParams = new URLSearchParams(hash.substring(1));
+          const accessToken = hashParams.get("access_token");
+          const refreshToken = hashParams.get("refresh_token");
+
+          if (accessToken && refreshToken) {
+            const { error } = await supabase.auth.setSession({
+              access_token: accessToken,
+              refresh_token: refreshToken,
+            });
+            if (error) throw error;
+            setSessionReady(true);
+            return;
+          }
         }
 
         const { data } = await supabase.auth.getSession();
