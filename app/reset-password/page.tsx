@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
@@ -25,7 +25,7 @@ function getStrength(pw: string) {
   return { label: "Excellent", score: 100, color: "#22C55E" };
 }
 
-export default function ResetPasswordPage() {
+function ResetPasswordContent() {
   const searchParams = useSearchParams();
 
   const tokenHash = searchParams.get("token_hash");
@@ -326,5 +326,21 @@ export default function ResetPasswordPage() {
         Reset in browser instead
       </button>
     </div>
+  );
+}
+
+// useSearchParams() requires a Suspense boundary at build time, or Next.js
+// fails static generation for this page (Error: missing-suspense-with-csr-bailout).
+export default function ResetPasswordPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-white">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-slate-200 border-t-[#2563EB]" />
+        </div>
+      }
+    >
+      <ResetPasswordContent />
+    </Suspense>
   );
 }
