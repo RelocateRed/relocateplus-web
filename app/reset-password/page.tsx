@@ -28,6 +28,20 @@ function getStrength(pw: string) {
 export default function ResetPasswordPage() {
   const searchParams = useSearchParams();
 
+  const tokenHash = searchParams.get("token_hash");
+  const code = searchParams.get("code");
+  const type = searchParams.get("type") ?? "recovery";
+
+  // The app deep link — only the app's verifyOtp call may consume this token.
+  const appUrl = tokenHash
+    ? `relocatplus://reset-password?token_hash=${encodeURIComponent(tokenHash)}&type=${type}`
+    : code
+    ? `relocatplus://reset-password?code=${encodeURIComponent(code)}`
+    : null;
+
+  const [attemptedAppOpen, setAttemptedAppOpen] = useState(false);
+  const [showWebForm, setShowWebForm] = useState(false);
+
   const [sessionReady, setSessionReady] = useState(false);
   const [sessionError, setSessionError] = useState("");
 
@@ -37,14 +51,26 @@ export default function ResetPasswordPage() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
+  // Try to open the app automatically. This does NOT consume the token —
+  // it's just a URL scheme redirect. The app's own verifyOtp call is what
+  // consumes it, on the app side.
   useEffect(() => {
+    if (!appUrl || attemptedAppOpen) return;
+    setAttemptedAppOpen(true);
+    const t = setTimeout(() => {
+      window.location.href = appUrl;
+    }, 400);
+    return () => clearTimeout(t);
+  }, [appUrl, attemptedAppOpen]);
+
+  // Only runs the web-based verifyOtp/setSession flow if the user explicitly
+  // chose "reset in browser" — never automatically, since that would burn
+  // the token before the app has a chance to use it.
+  useEffect(() => {
+    if (!showWebForm) return;
+
     (async () => {
       try {
-        // Supabase can send the token either as query params (?code=...)
-        // or as a URL fragment (#access_token=...) depending on flow type.
-        const code = searchParams.get("code");
-        const tokenHash = searchParams.get("token_hash");
-
         if (code) {
           const { error } = await supabase.auth.exchangeCodeForSession(code);
           if (error) throw error;
@@ -61,7 +87,7 @@ export default function ResetPasswordPage() {
           return;
         }
 
-        // Check the URL fragment for an error first (e.g. expired link)
+        // Legacy fragment-based links still sitting in old inboxes
         const hash = typeof window !== "undefined" ? window.location.hash : "";
         if (hash.includes("error=")) {
           const hashParams = new URLSearchParams(hash.substring(1));
@@ -73,13 +99,10 @@ export default function ResetPasswordPage() {
           );
           return;
         }
-
-        // Check the URL fragment for access_token (implicit flow)
         if (hash.includes("access_token")) {
           const hashParams = new URLSearchParams(hash.substring(1));
           const accessToken = hashParams.get("access_token");
           const refreshToken = hashParams.get("refresh_token");
-
           if (accessToken && refreshToken) {
             const { error } = await supabase.auth.setSession({
               access_token: accessToken,
@@ -106,7 +129,7 @@ export default function ResetPasswordPage() {
         );
       }
     })();
-  }, [searchParams]);
+  }, [showWebForm, code, tokenHash]);
 
   const strength = useMemo(() => getStrength(password), [password]);
 
@@ -136,21 +159,17 @@ export default function ResetPasswordPage() {
     setSuccess(true);
   };
 
-  if (!sessionReady && !sessionError) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-white">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-slate-200 border-t-[#2563EB]" />
-      </div>
-    );
-  }
-
-  if (sessionError) {
+  // ── No token in the URL at all ──────────────────────────────────────────
+  if (!appUrl) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
         <h1 className="mb-2 text-2xl font-bold text-slate-900">
           Link expired
         </h1>
-        <p className="mb-8 max-w-sm text-slate-500">{sessionError}</p>
+        <p className="mb-8 max-w-sm text-slate-500">
+          This reset link is missing its token. Please request a new one from
+          the app.
+        </p>
         <a href="/" className="rounded-xl bg-[#2563EB] px-6 py-3 font-semibold text-white hover:bg-[#1d4ed8]">
           Back to homepage
         </a>
@@ -158,103 +177,154 @@ export default function ResetPasswordPage() {
     );
   }
 
-  if (success) {
+  // ── Web form path (only after explicit opt-in) ──────────────────────────
+  if (showWebForm) {
+    if (!sessionReady && !sessionError) {
+      return (
+        <div className="flex min-h-screen items-center justify-center bg-white">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-slate-200 border-t-[#2563EB]" />
+        </div>
+      );
+    }
+
+    if (sessionError) {
+      return (
+        <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+          <h1 className="mb-2 text-2xl font-bold text-slate-900">
+            Couldn&apos;t verify link
+          </h1>
+          <p className="mb-8 max-w-sm text-slate-500">{sessionError}</p>
+          <a href="/" className="rounded-xl bg-[#2563EB] px-6 py-3 font-semibold text-white hover:bg-[#1d4ed8]">
+            Back to homepage
+          </a>
+        </div>
+      );
+    }
+
+    if (success) {
+      return (
+        <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+          <h1 className="mb-2 text-2xl font-bold text-slate-900">
+            Password updated
+          </h1>
+          <p className="mb-8 max-w-sm text-slate-500">
+            Your password has been changed successfully. You can now sign in
+            with your new password in the Relocate+ app.
+          </p>
+        </div>
+      );
+    }
+
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
-        <h1 className="mb-2 text-2xl font-bold text-slate-900">
-          Password updated
-        </h1>
-        <p className="mb-8 max-w-sm text-slate-500">
-          Your password has been changed successfully. You can now sign in
-          with your new password in the Relocate+ app.
-        </p>
+      <div className="flex min-h-screen items-center justify-center bg-white px-6">
+        <div className="w-full max-w-sm">
+          <h1 className="mb-2 text-2xl font-bold text-slate-900">
+            Set a new password
+          </h1>
+          <p className="mb-8 text-sm text-slate-500">
+            Choose a new password for your Relocate+ account.
+          </p>
+
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="New password"
+            className="mb-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[#2563EB]"
+          />
+
+          {password.length > 0 && (
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100">
+                <div
+                  className="h-full rounded-full transition-all"
+                  style={{
+                    width: `${strength.score}%`,
+                    backgroundColor: strength.color,
+                  }}
+                />
+              </div>
+              <span
+                className="min-w-[70px] text-right text-xs font-bold"
+                style={{ color: strength.color }}
+              >
+                {strength.label}
+              </span>
+            </div>
+          )}
+
+          <div className="mb-5 flex flex-col gap-2">
+            {REQUIREMENTS.map((req) => {
+              const met = req.test(password);
+              return (
+                <div key={req.label} className="flex items-center gap-2">
+                  <div
+                    className={`flex items-center justify-center rounded-full border ${
+                      met ? "border-green-500 bg-green-500" : "border-slate-300"
+                    }`}
+                    style={{ width: 18, height: 18 }}
+                  >
+                    {met && (
+                      <span className="text-[10px] font-bold text-white">✓</span>
+                    )}
+                  </div>
+                  <span
+                    className={`text-sm ${
+                      met ? "font-medium text-slate-900" : "text-slate-500"
+                    }`}
+                  >
+                    {req.label}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm new password"
+            className="mb-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[#2563EB]"
+          />
+
+          {error && <p className="mb-3 text-sm text-red-500">{error}</p>}
+
+          <button
+            onClick={handleReset}
+            disabled={loading}
+            className="w-full rounded-xl bg-[#2563EB] py-3.5 font-semibold text-white transition-colors hover:bg-[#1d4ed8] disabled:bg-slate-300"
+          >
+            {loading ? "Updating…" : "Update password"}
+          </button>
+        </div>
       </div>
     );
   }
 
+  // ── Default: bridging into the app ──────────────────────────────────────
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white px-6">
-      <div className="w-full max-w-sm">
-        <h1 className="mb-2 text-2xl font-bold text-slate-900">
-          Set a new password
-        </h1>
-        <p className="mb-8 text-sm text-slate-500">
-          Choose a new password for your Relocate+ account.
-        </p>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+      <h1 className="mb-2 text-2xl font-bold text-slate-900">
+        Opening Relocate+…
+      </h1>
+      <p className="mb-8 max-w-sm text-slate-500">
+        If the app doesn&apos;t open automatically, tap the button below.
+      </p>
 
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="New password"
-          className="mb-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[#2563EB]"
-        />
+      <a
+        href={appUrl}
+        className="mb-4 w-full max-w-xs rounded-xl bg-[#2563EB] py-3.5 text-center font-semibold text-white hover:bg-[#1d4ed8]"
+      >
+        Open in Relocate+
+      </a>
 
-        {password.length > 0 && (
-          <div className="mb-4 flex items-center gap-3">
-            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100">
-              <div
-                className="h-full rounded-full transition-all"
-                style={{
-                  width: `${strength.score}%`,
-                  backgroundColor: strength.color,
-                }}
-              />
-            </div>
-            <span
-              className="min-w-[70px] text-right text-xs font-bold"
-              style={{ color: strength.color }}
-            >
-              {strength.label}
-            </span>
-          </div>
-        )}
-
-        <div className="mb-5 flex flex-col gap-2">
-          {REQUIREMENTS.map((req) => {
-            const met = req.test(password);
-            return (
-              <div key={req.label} className="flex items-center gap-2">
-                <div
-                  className={`flex items-center justify-center rounded-full border ${
-                    met ? "border-green-500 bg-green-500" : "border-slate-300"
-                  }`}
-                  style={{ width: 18, height: 18 }}
-                >
-                  {met && (
-                    <span className="text-[10px] font-bold text-white">✓</span>
-                  )}
-                </div>
-                <span
-                  className={`text-sm ${
-                    met ? "font-medium text-slate-900" : "text-slate-500"
-                  }`}
-                >
-                  {req.label}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder="Confirm new password"
-          className="mb-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-[#2563EB]"
-        />
-
-        {error && <p className="mb-3 text-sm text-red-500">{error}</p>}
-
-        <button
-          onClick={handleReset}
-          disabled={loading}
-          className="w-full rounded-xl bg-[#2563EB] py-3.5 font-semibold text-white transition-colors hover:bg-[#1d4ed8] disabled:bg-slate-300"
-        >
-          {loading ? "Updating…" : "Update password"}
-        </button>
-      </div>
+      <button
+        onClick={() => setShowWebForm(true)}
+        className="text-sm text-slate-400 underline hover:text-slate-600"
+      >
+        Reset in browser instead
+      </button>
     </div>
   );
 }
