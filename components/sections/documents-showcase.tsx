@@ -10,18 +10,18 @@ export default function DocumentsShowcase() {
   return (
     <Section
        id="documents"
-       className="relative overflow-hidden bg-white"
+       className="relative overflow-hidden py-20 lg:py-32 bg-white"
 >
 
       <div className="absolute left-0 top-24 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]" />
 
       <Container>
 
-        <div className="grid items-center gap-24 lg:grid-cols-2">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
 
           {/* LEFT */}
 
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none order-2 lg:order-1">
 
             <div className="absolute inset-0 rounded-[48px] bg-blue-500/5 blur-3xl" />
 
@@ -33,7 +33,7 @@ export default function DocumentsShowcase() {
                width={600}
                height={600}
                className="w-full"
-               sizes="(max-width: 768px) 100vw, 600px"
+               sizes="(max-width: 1023px) 320px, 600px"
              />
 
             </div>
@@ -42,13 +42,13 @@ export default function DocumentsShowcase() {
 
           {/* RIGHT */}
 
-          <div>
+          <div className="order-1 lg:order-2">
 
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
               SECURE DOCUMENT STORAGE
             </p>
 
-            <Heading className="mt-6">
+            <Heading className="mt-6 text-4xl sm:text-5xl">
 
               Everything important.
               <br />
@@ -56,7 +56,7 @@ export default function DocumentsShowcase() {
 
             </Heading>
 
-            <Text className="mt-8 text-xl leading-9">
+            <Text className="mt-6 text-lg leading-8 lg:mt-8 lg:text-xl lg:leading-9">
 
               Keep your passport, visa, insurance,
               certificates and other essential documents
@@ -65,11 +65,11 @@ export default function DocumentsShowcase() {
 
             </Text>
 
-            <div className="mt-12 space-y-8">
+            <div className="mt-8 space-y-6 lg:mt-12 lg:space-y-8">
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
                   🔒
                 </div>
 
@@ -89,7 +89,7 @@ export default function DocumentsShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
                   📄
                 </div>
 
@@ -109,7 +109,7 @@ export default function DocumentsShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
                   ☁️
                 </div>
 
