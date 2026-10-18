@@ -1,4 +1,6 @@
 import Button from "@/components/ui/button";
+import StoreBadges from "@/components/ui/store-badges";
+import { STORE_BADGES_LIVE } from "@/lib/site";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 
@@ -45,20 +47,24 @@ export default function DownloadCTA() {
 
             </Text>
 
-            <div className="mt-14 flex flex-wrap justify-center gap-5">
-
-              <Button href="https://apps.apple.com/nl/app/relocate/id6789252666">
-                Download on the App Store
-              </Button>
-
-              <Button
-                href="#"
-                variant="secondary"
-              >
-                Coming soon on Google Play
-              </Button>
-
-            </div>
+            {STORE_BADGES_LIVE ? (
+              <StoreBadges campaign="home-bottom" align="center" className="mt-14" />
+            ) : (
+              <div className="mt-14 flex flex-wrap justify-center gap-5">
+  
+                <Button href="https://apps.apple.com/nl/app/relocate/id6789252666">
+                  Download on the App Store
+                </Button>
+  
+                <Button
+                  href="#"
+                  variant="secondary"
+                >
+                  Coming soon on Google Play
+                </Button>
+  
+              </div>
+            )}
 
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-slate-400">
 

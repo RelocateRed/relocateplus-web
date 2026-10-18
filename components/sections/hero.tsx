@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import Badge from "@/components/ui/badge";
 import Button from "@/components/ui/button";
+import StoreBadges from "@/components/ui/store-badges";
+import { STORE_BADGES_LIVE } from "@/lib/site";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 
@@ -71,14 +73,18 @@ export default function Hero() {
                 track your progress and always know exactly what comes next.
               </Text>
 
-              <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-                <Button href="https://apps.apple.com/app/relocate-plus/id6789252666">
-                  Download on the App Store
-                </Button>
-                <Button variant="secondary" href="#app-showcase">
-                  Explore the app
-                </Button>
-              </div>
+              {STORE_BADGES_LIVE ? (
+                <StoreBadges campaign="home-hero" className="mt-12" />
+              ) : (
+                <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+                  <Button href="https://apps.apple.com/app/relocate-plus/id6789252666">
+                    Download on the App Store
+                  </Button>
+                  <Button variant="secondary" href="#app-showcase">
+                    Explore the app
+                  </Button>
+                </div>
+              )}
 
               <div className="mt-16 flex items-center gap-3">
                 <div className="text-lg text-[#2563EB]">★★★★★</div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import { organizationJsonLd, toScript } from "@/lib/guides/jsonld";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -97,6 +98,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${interTight.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: toScript(organizationJsonLd()) }}
+        />
         {children}
       </body>
     </html>

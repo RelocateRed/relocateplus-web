@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getGuides } from "@/content/guides";
 
 import Container from "@/components/ui/container";
 
@@ -42,33 +43,42 @@ export default function Footer() {
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
-              <a
-                href="#why-relocate"
+              <Link
+                href="/#why-relocate"
                 className="text-slate-600 duration-300 hover:text-[#2563EB]"
               >
                 Features
-              </a>
+              </Link>
 
-              <a
-                href="#roadmaps"
+              <Link
+                href="/#roadmaps"
                 className="text-slate-600 duration-300 hover:text-[#2563EB]"
               >
                 Roadmaps
-              </a>
+              </Link>
 
-              <a
-                href="#documents"
+              <Link
+                href="/#documents"
                 className="text-slate-600 duration-300 hover:text-[#2563EB]"
               >
                 Documents
-              </a>
+              </Link>
 
-              <a
-                href="#ai"
+              <Link
+                href="/#ai"
                 className="text-slate-600 duration-300 hover:text-[#2563EB]"
               >
                 AI Assistant
-              </a>
+              </Link>
+
+              {getGuides().length ? (
+                <Link
+                  href="/guides"
+                  className="text-slate-600 duration-300 hover:text-[#2563EB]"
+                >
+                  Moving guides
+                </Link>
+              ) : null}
             </div>
           </div>
 

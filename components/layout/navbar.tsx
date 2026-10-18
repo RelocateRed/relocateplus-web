@@ -7,13 +7,14 @@ import Button from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 
+// "/#..." so the links also work from other pages (e.g. /guides)
 const links = [
-  { label: "Why", href: "#why-relocate" },
-  { label: "Roadmaps", href: "#roadmaps" },
-  { label: "Documents", href: "#documents" },
-  { label: "Progress", href: "#progress" },
-  { label: "AI", href: "#ai" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Why", href: "/#why-relocate" },
+  { label: "Roadmaps", href: "/#roadmaps" },
+  { label: "Documents", href: "/#documents" },
+  { label: "Progress", href: "/#progress" },
+  { label: "AI", href: "/#ai" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export default function Navbar() {
@@ -22,7 +23,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const sections = links
-      .map((link) => document.querySelector(link.href))
+      .filter((link) => link.href.startsWith("/#"))
+      .map((link) => document.querySelector(link.href.slice(1)))
       .filter(Boolean) as HTMLElement[];
 
     const onScroll = () => {
@@ -35,7 +37,7 @@ export default function Navbar() {
           scrollPosition >= section.offsetTop &&
           scrollPosition < section.offsetTop + section.offsetHeight
         ) {
-          setActive(`#${section.id}`);
+          setActive(`/#${section.id}`);
           break;
         }
       }

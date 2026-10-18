@@ -1,42 +1,32 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+import { getPublishedGuides } from "@/content/guides";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const guides = getPublishedGuides();
+
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/contact`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/support`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE_URL}/terms`, changeFrequency: "yearly", priority: 0.3 },
+  ];
+
+  if (!guides.length) return staticPages;
+
+  const newest = guides.map((g) => g.lastVerified).sort().at(-1)!;
+
   return [
-    {
-      url: 'https://relocate-plus.com',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: 'https://relocate-plus.com/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://relocate-plus.com/contact',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://relocate-plus.com/support',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://relocate-plus.com/privacy',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: 'https://relocate-plus.com/terms',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+    ...staticPages,
+    { url: `${SITE_URL}/guides`, lastModified: new Date(newest), changeFrequency: "weekly", priority: 0.8 },
+    // lastModified = the date the facts were last verified, so Google sees real updates only
+    ...guides.map((g) => ({
+      url: `${SITE_URL}/guides/${g.slug}`,
+      lastModified: new Date(g.lastVerified),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
