@@ -77,7 +77,11 @@ export interface Guide {
   fromName: string;
   toName: string;
   /** Category used for the hub page */
-  kind: "route" | "visa";
+  /** route = country to country, visa = one visa for all nationalities, topic = practical how-to */
+  kind: "route" | "visa" | "topic";
+
+  /** Optional heading overrides (mainly for topic pages) */
+  labels?: { visas?: string; costs?: string };
 
   /** <title>, ~55–65 characters */
   title: string;
@@ -100,7 +104,8 @@ export interface Guide {
   documents: ChecklistItem[];
   costs: CostItem[];
   costNote?: string;
-  tax: Paragraph[];
+  /** Optional for topic pages */
+  tax?: Paragraph[];
   family?: Paragraph[];
   pitfalls: Paragraph[];
   faqs: Faq[];

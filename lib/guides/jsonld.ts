@@ -25,7 +25,7 @@ export function guideJsonLd(g: Guide) {
           logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
         },
         image: `${SITE_URL}/opengraph-image.png`,
-        about: [{ "@type": "Country", name: g.toName }],
+        about: [g.kind === "topic" ? { "@type": "Thing", name: g.toName } : { "@type": "Country", name: g.toName }],
         citation: g.sources.map((s) => s.url),
       },
       {

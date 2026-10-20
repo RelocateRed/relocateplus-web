@@ -243,5 +243,5 @@ export const usToSpain: Guide = {
 
   appPitch:
     "Relocate+ builds a US → Spain roadmap you can follow step by step: track the documents for each family member, add dates like your medical certificate's 90-day limit and your TIE appointment to the deadline agenda and calendar, and keep your moving budget in one place.",
-  related: ["moving-from-us-to-portugal", "moving-from-uk-to-spain"],
+  related: ["moving-from-us-to-portugal", "moving-from-uk-to-spain", "fbi-background-check-apostille-for-visa"],
 };

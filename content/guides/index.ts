@@ -9,6 +9,9 @@ import { thailandDtv } from "./thailand-dtv";
 import { ukToAustralia } from "./uk-to-australia";
 import { usToGermany } from "./us-to-germany";
 import { ukToDubai } from "./uk-to-dubai";
+import { ukToPortugal } from "./uk-to-portugal";
+import { usToNetherlands } from "./us-to-netherlands";
+import { fbiBackgroundCheck } from "./fbi-background-check";
 
 /**
  * To add a guide: copy an existing file in this folder, rewrite it for the
@@ -25,6 +28,10 @@ const ALL_GUIDES: Guide[] = [
   ukToAustralia,
   usToGermany,
   ukToDubai,
+  // Batch 3
+  ukToPortugal,
+  usToNetherlands,
+  fbiBackgroundCheck,
 ];
 
 validateGuides(ALL_GUIDES);

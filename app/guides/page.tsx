@@ -23,6 +23,7 @@ export default function GuidesHub() {
   if (!guides.length) notFound();
   const routes = guides.filter((g) => g.kind === "route");
   const visas = guides.filter((g) => g.kind === "visa");
+  const topics = guides.filter((g) => g.kind === "topic");
 
   const itemList = {
     "@context": "https://schema.org",
@@ -42,7 +43,7 @@ export default function GuidesHub() {
         className="block h-full rounded-[24px] border border-slate-200 p-6 transition hover:-translate-y-0.5 hover:border-[#2563EB]/40 hover:shadow-[0_15px_40px_rgba(15,23,42,.06)]"
       >
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#2563EB]">
-          {g.kind === "route" ? `${g.fromName.replace(/^the /, "")} → ${g.toName}` : `${g.toName} visa`}
+          {g.kind === "route" ? `${g.fromName.replace(/^the /, "")} → ${g.toName}` : g.kind === "visa" ? `${g.toName} visa` : "How-to"}
           {g.status === "draft" ? " · draft" : ""}
         </p>
         <h3 className="mt-3 text-lg font-semibold leading-7 text-slate-900">{g.h1}</h3>
@@ -81,6 +82,15 @@ export default function GuidesHub() {
               <h2 className="font-heading text-2xl font-bold text-slate-900">Visa guides</h2>
               <ul className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {visas.map((g) => <Card key={g.slug} g={g} />)}
+              </ul>
+            </section>
+          ) : null}
+
+          {topics.length ? (
+            <section className="mt-16">
+              <h2 className="font-heading text-2xl font-bold text-slate-900">Practical guides</h2>
+              <ul className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {topics.map((g) => <Card key={g.slug} g={g} />)}
               </ul>
             </section>
           ) : null}

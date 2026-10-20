@@ -30,7 +30,7 @@ function claimsOf(g: Guide) {
     ...g.steps.map((x) => ({ where: `step "${x.title}"`, text: x.detail, ids: x.sourceIds })),
     ...g.documents.map((x) => ({ where: `document "${x.item}"`, text: x.item, ids: x.sourceIds })),
     ...g.costs.map((x) => ({ where: `cost "${x.item}"`, text: x.amount, ids: x.sourceIds })),
-    ...g.tax.map((x) => ({ where: "tax", text: x.text, ids: x.sourceIds })),
+    ...(g.tax ?? []).map((x) => ({ where: "tax", text: x.text, ids: x.sourceIds })),
     ...(g.family ?? []).map((x) => ({ where: "family", text: x.text, ids: x.sourceIds })),
     ...g.pitfalls.map((x) => ({ where: "pitfalls", text: x.text, ids: x.sourceIds })),
     ...g.faqs.map((x) => ({ where: `faq "${x.q}"`, text: x.a, ids: x.sourceIds })),

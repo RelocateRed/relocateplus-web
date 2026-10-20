@@ -98,12 +98,12 @@ export default function GuideArticle({
 
   const toc = [
     { id: "key-facts", label: "Key facts" },
-    { id: "visas", label: "Visa options" },
+    { id: "visas", label: guide.labels?.visas ?? "Visa options" },
     ...(guide.recentChanges?.length ? [{ id: "changes", label: "What changed recently" }] : []),
     { id: "timeline", label: "Step-by-step timeline" },
     { id: "documents", label: "Document checklist" },
-    { id: "costs", label: "Official fees" },
-    { id: "tax", label: "Tax basics" },
+    { id: "costs", label: guide.labels?.costs ?? "Official fees" },
+    ...(guide.tax?.length ? [{ id: "tax", label: "Tax basics" }] : []),
     ...(guide.family?.length ? [{ id: "family", label: "Moving with family" }] : []),
     { id: "pitfalls", label: "Common mistakes" },
     { id: "faq", label: "FAQ" },
@@ -177,7 +177,7 @@ export default function GuideArticle({
 
             {/* Visas */}
             <section aria-labelledby="visas">
-              <H2 id="visas">Visa options</H2>
+              <H2 id="visas">{guide.labels?.visas ?? "Visa options"}</H2>
               <div className="mt-6 space-y-5">
                 {guide.visaOptions.map((v) => (
                   <div key={v.name} className="rounded-[24px] border border-slate-200 p-6 md:p-7">
@@ -255,7 +255,7 @@ export default function GuideArticle({
 
             {/* Costs */}
             <section aria-labelledby="costs">
-              <H2 id="costs">Official fees</H2>
+              <H2 id="costs">{guide.labels?.costs ?? "Official fees"}</H2>
               <div className="mt-6 overflow-x-auto rounded-[24px] border border-slate-200">
                 <table className="w-full text-left">
                   <thead className="bg-slate-50 text-sm text-slate-500">
@@ -284,6 +284,7 @@ export default function GuideArticle({
             </section>
 
             {/* Tax */}
+            {guide.tax?.length ? (
             <section aria-labelledby="tax">
               <H2 id="tax">Tax basics</H2>
               <div className="mt-6 space-y-4">
@@ -298,6 +299,7 @@ export default function GuideArticle({
                 </p>
               </div>
             </section>
+            ) : null}
 
             {/* Family */}
             {guide.family?.length ? (
