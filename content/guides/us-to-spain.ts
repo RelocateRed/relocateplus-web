@@ -23,8 +23,8 @@ export const usToSpain: Guide = {
       sourceIds: ["es-la-nlv", "arc-iprem-2026"],
     },
     {
-      text: "The telework visa requires 200% of Spain's minimum wage; with the 2026 minimum wage at €17,094 a year, that works out to about €2,849 a month. The golden visa no longer exists: it ended for new applications on 3 April 2025.",
-      sourceIds: ["es-ny-telework", "es-smi-2026", "kpmg-golden"],
+      text: "The telework visa requires 200% of Spain's minimum wage; with the 2026 minimum wage at €17,094 a year, the official FAQ's monthly calculation gives €2,442 a month, or about €2,849 if your consulate uses the annual figure. The golden visa no longer exists: it ended for new applications on 3 April 2025.",
+      sourceIds: ["uge-faq", "es-ny-telework", "es-smi-2026", "kpmg-golden"],
     },
   ],
 
@@ -35,7 +35,7 @@ export const usToSpain: Guide = {
     { label: "IPREM (2026)", value: "€600/month · €7,200/year", sourceIds: ["arc-iprem-2026"] },
     { label: "Non-lucrative visa funds", value: "€28,800/year + €7,200 per dependant", sourceIds: ["es-la-nlv", "arc-iprem-2026"] },
     { label: "Minimum wage (SMI 2026)", value: "€1,221 × 14 payments = €17,094/year", sourceIds: ["es-smi-2026"] },
-    { label: "Telework visa income", value: "200% of SMI ≈ €2,849/month", sourceIds: ["es-ny-telework", "es-smi-2026"] },
+    { label: "Telework visa income", value: "200% of SMI: €2,442/month (official FAQ) or ≈ €2,849 (annual basis)", sourceIds: ["uge-faq", "es-ny-telework", "es-smi-2026"] },
     { label: "Visa fee for US citizens (LA, 2026)", value: "$140 + $13 residence permit fee", sourceIds: ["es-la-nlv"] },
   ],
 
@@ -55,12 +55,12 @@ export const usToSpain: Guide = {
       name: "International telework visa (digital nomad)",
       bestFor: "Remote employees and freelancers working for companies outside Spain.",
       requirement:
-        "Income of 200% of the minimum wage (about €2,849/month in 2026), plus 75% of SMI for the first family member and 25% for each additional one. Employees need three months with the company and written permission to work remotely; the company must be at least one year old.",
+        "Income of 200% of the minimum wage (€2,442/month per the official FAQ, or about €2,849 on an annual basis), plus 75% of SMI for the first family member and 25% for each additional one. Employees need three months with the company and written permission to work remotely; the company must be at least one year old.",
       notes: [
         "You need a university degree or at least three years of relevant professional experience.",
         "The legal decision period at the New York consulate is 10 days.",
       ],
-      sourceIds: ["es-ny-telework", "es-smi-2026"],
+      sourceIds: ["uge-faq", "es-ny-telework", "es-smi-2026"],
     },
     {
       name: "Golden visa (closed)",
@@ -213,8 +213,8 @@ export const usToSpain: Guide = {
     },
     {
       q: "What income do I need for Spain's digital nomad visa?",
-      a: "200% of the Spanish minimum wage. For 2026 the minimum wage is €17,094 a year, so the requirement is roughly €2,849 a month (€34,188 a year), plus extra for family members. Confirm how your consulate calculates it.",
-      sourceIds: ["es-ny-telework", "es-smi-2026"],
+      a: "200% of the Spanish minimum wage. For 2026 the minimum wage is €17,094 a year, so the official FAQ's figure is €2,442 a month (200% of €1,221), while an annual calculation gives about €2,849. Add extra for family members. Confirm how your consulate calculates it.",
+      sourceIds: ["uge-faq", "es-ny-telework", "es-smi-2026"],
     },
     {
       q: "Does Spain still have a golden visa?",
@@ -229,6 +229,7 @@ export const usToSpain: Guide = {
   ],
 
   sources: [
+    { id: "uge-faq", title: "Digital nomads: frequently asked questions (English)", publisher: "Ministry of Inclusion, Social Security and Migration (UGE)", url: "https://bibliovirtual.inclusion.gob.es/documents/d/unidadgrandesempresas/digital-nomad-faqs-english", official: true, accessed: "2026-10-23" },
     { id: "es-la-nlv", title: "Non-working (non-lucrative) residence visa (updated 11 Feb 2026)", publisher: "Consulate General of Spain in Los Angeles", url: "https://exteriores.gob.es/Consulados/losangeles/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx", official: true, accessed: ACCESSED },
     { id: "es-ny-telework", title: "Telework visa", publisher: "Consulate General of Spain in New York", url: "https://exteriores.gob.es/Consulados/nuevayork/en/ServiciosConsulares/Paginas/Consular/Visado-de-teletrabajo.aspx", official: true, accessed: ACCESSED },
     { id: "arc-iprem-2026", title: "El IPREM en 2026 y cómo afecta a los trámites de extranjería", publisher: "ARC Legal", url: "https://www.arc-legal.es/el-iprem-en-2026-que-es-cuanto-es-y-como-afecta-a-los-tramites-de-extranjeria/", official: false, accessed: ACCESSED },
@@ -243,5 +244,5 @@ export const usToSpain: Guide = {
 
   appPitch:
     "Relocate+ builds a US → Spain roadmap you can follow step by step: track the documents for each family member, add dates like your medical certificate's 90-day limit and your TIE appointment to the deadline agenda and calendar, and keep your moving budget in one place.",
-  related: ["moving-from-us-to-portugal", "moving-from-uk-to-spain", "fbi-background-check-apostille-for-visa"],
+  related: ["spain-digital-nomad-visa", "moving-from-us-to-portugal", "moving-from-uk-to-spain", "fbi-background-check-apostille-for-visa"],
 };

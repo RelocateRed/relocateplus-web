@@ -55,8 +55,8 @@ export const ukToSpain: Guide = {
       name: "Digital nomad / telework visa",
       bestFor: "Remote employees and freelancers working for companies outside Spain.",
       requirement:
-        "Income of 200% of Spain's minimum wage (about €2,849/month in 2026, based on €17,094 a year), three months with your employer (or clients), and a company that has existed for at least a year.",
-      sourceIds: ["es-london-telework", "es-smi-2026"],
+        "Income of 200% of Spain's minimum wage (€2,442/month per the official FAQ, or about €2,849 if based on €17,094 a year), three months with your employer (or clients), and a company that has existed for at least a year.",
+      sourceIds: ["uge-faq", "es-london-telework", "es-smi-2026"],
     },
   ],
 
@@ -212,6 +212,7 @@ export const ukToSpain: Guide = {
   ],
 
   sources: [
+    { id: "uge-faq", title: "Digital nomads: frequently asked questions (English)", publisher: "Ministry of Inclusion, Social Security and Migration (UGE)", url: "https://bibliovirtual.inclusion.gob.es/documents/d/unidadgrandesempresas/digital-nomad-faqs-english", official: true, accessed: "2026-10-23" },
     { id: "es-london-nlv", title: "Non-working residence visa (updated 6 July 2026)", publisher: "Consulate General of Spain in London", url: "https://exteriores.gob.es/Consulados/londres/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx", official: true, accessed: ACCESSED },
     { id: "es-london-telework", title: "Telework visa", publisher: "Consulate General of Spain in New York (same national requirements)", url: "https://exteriores.gob.es/Consulados/nuevayork/en/ServiciosConsulares/Paginas/Consular/Visado-de-teletrabajo.aspx", official: true, accessed: ACCESSED },
     { id: "govuk-living-spain", title: "Living in Spain (last updated 3 July 2026)", publisher: "GOV.UK", url: "https://www.gov.uk/guidance/living-in-spain", official: true, accessed: ACCESSED },
@@ -226,5 +227,5 @@ export const ukToSpain: Guide = {
 
   appPitch:
     "Relocate+ maps your UK → Spain move step by step: put your ACRO and medical-certificate dates, padrón, TIE and the six-month licence exchange in your deadline agenda and calendar, and keep the whole family's documents in one place.",
-  related: ["moving-from-us-to-spain", "moving-from-us-to-portugal"],
+  related: ["spain-digital-nomad-visa", "moving-from-us-to-spain", "moving-from-us-to-portugal"],
 };

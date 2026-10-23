@@ -12,6 +12,9 @@ import { ukToDubai } from "./uk-to-dubai";
 import { ukToPortugal } from "./uk-to-portugal";
 import { usToNetherlands } from "./us-to-netherlands";
 import { fbiBackgroundCheck } from "./fbi-background-check";
+import { spainDigitalNomadVisa } from "./spain-digital-nomad-visa";
+import { portugalD8Visa } from "./portugal-d8-digital-nomad-visa";
+import { germanyOpportunityCard } from "./germany-opportunity-card";
 
 /**
  * To add a guide: copy an existing file in this folder, rewrite it for the
@@ -32,6 +35,10 @@ const ALL_GUIDES: Guide[] = [
   ukToPortugal,
   usToNetherlands,
   fbiBackgroundCheck,
+  // Batch 4
+  spainDigitalNomadVisa,
+  portugalD8Visa,
+  germanyOpportunityCard,
 ];
 
 validateGuides(ALL_GUIDES);

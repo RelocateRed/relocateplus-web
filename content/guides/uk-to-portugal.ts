@@ -214,5 +214,5 @@ export const ukToPortugal: Guide = {
 
   appPitch:
     "Relocate+ turns your UK → Portugal move into one roadmap: put your ACRO certificate's 90-day window, VFS appointment and AIMA date in the deadline agenda and calendar, keep the family's documents together, and plan your moving budget.",
-  related: ["moving-from-us-to-portugal", "moving-from-uk-to-spain"],
+  related: ["portugal-d8-digital-nomad-visa", "moving-from-us-to-portugal", "moving-from-uk-to-spain"],
 };

@@ -55,7 +55,7 @@ export const usToGermany: Guide = {
       name: "Opportunity Card (Chancenkarte) for job seekers",
       bestFor: "Qualified people who want to come first and look for work in Germany.",
       requirement:
-        "Either a fully recognised qualification, or at least six points in the points system (with German A1 or English B2, plus a qualification recognised in the country where you got it). You must show living costs via a blocked account or declaration of commitment; Make it in Germany lists €1,091 net per month as the 2025 figure.",
+        "Either a fully recognised qualification, or at least six points in the points system (with German A1 or English B2, plus a qualification recognised in the country where you got it). You must show living costs via a blocked account or declaration of commitment; Make it in Germany lists €1,091 net per month as the 2026 figure.",
       notes: [
         "Issued for up to one year; part-time work up to 20 hours a week and trial work of up to two weeks per employer are allowed.",
         "Apply at a German mission abroad after the official self-check.",
@@ -147,7 +147,7 @@ export const usToGermany: Guide = {
 
   costs: [
     { item: "Residence permit or EU Blue Card (issued in Germany)", amount: "€100", sourceIds: ["aufenthv-45"] },
-    { item: "Opportunity Card living-cost proof", amount: "€1,091 net/month (2025 figure)", note: "Money you must show, not a fee. Check the current figure with the German mission.", sourceIds: ["mig-opportunity-card"] },
+    { item: "Opportunity Card living-cost proof", amount: "€1,091 net/month (2026 figure)", note: "Money you must show, not a fee. Check the current figure with the German mission.", sourceIds: ["mig-opportunity-card"] },
   ],
   costNote:
     "Translation, degree evaluation and health insurance premiums depend on your situation, so we don't estimate them.",
@@ -235,5 +235,5 @@ export const usToGermany: Guide = {
 
   appPitch:
     "Relocate+ gives you a US → Germany roadmap: add your 90-day permit deadline and the two-week Anmeldung to the deadline agenda and your calendar, keep your degree, contract and insurance papers together, and track your moving budget.",
-  related: ["moving-from-us-to-portugal", "moving-from-us-to-spain"],
+  related: ["germany-opportunity-card", "moving-from-us-to-portugal", "moving-from-us-to-spain"],
 };
