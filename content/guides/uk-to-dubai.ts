@@ -215,5 +215,5 @@ export const ukToDubai: Guide = {
 
   appPitch:
     "Relocate+ maps your UK → Dubai move: put your visa entry window, Emirates ID and HMRC P85 in the deadline agenda and calendar, keep contracts, insurance and family documents together, and plan your moving budget.",
-  related: ["moving-from-uk-to-australia", "moving-from-uk-to-spain"],
+  related: ["dubai-remote-work-visa", "moving-from-uk-to-australia", "moving-from-uk-to-spain"],
 };

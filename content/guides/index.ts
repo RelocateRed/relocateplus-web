@@ -15,6 +15,9 @@ import { fbiBackgroundCheck } from "./fbi-background-check";
 import { spainDigitalNomadVisa } from "./spain-digital-nomad-visa";
 import { portugalD8Visa } from "./portugal-d8-digital-nomad-visa";
 import { germanyOpportunityCard } from "./germany-opportunity-card";
+import { dubaiRemoteWorkVisa } from "./dubai-remote-work-visa";
+import { movingAbroadWithPets } from "./moving-abroad-with-pets";
+import { movingAbroadWithKids } from "./moving-abroad-with-kids";
 
 /**
  * To add a guide: copy an existing file in this folder, rewrite it for the
@@ -39,6 +42,10 @@ const ALL_GUIDES: Guide[] = [
   spainDigitalNomadVisa,
   portugalD8Visa,
   germanyOpportunityCard,
+  // Batch 5
+  dubaiRemoteWorkVisa,
+  movingAbroadWithPets,
+  movingAbroadWithKids,
 ];
 
 validateGuides(ALL_GUIDES);

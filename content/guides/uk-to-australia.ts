@@ -248,5 +248,5 @@ export const ukToAustralia: Guide = {
 
   appPitch:
     "Relocate+ turns your UK → Australia move into a step-by-step roadmap: track your skills assessment, EOI and visa dates in the deadline agenda and calendar, keep the family's documents in one place, and plan your moving budget.",
-  related: ["moving-from-uk-to-spain", "moving-from-uk-to-dubai"],
+  related: ["moving-abroad-with-a-dog-or-cat", "moving-from-uk-to-spain", "moving-from-uk-to-dubai"],
 };
