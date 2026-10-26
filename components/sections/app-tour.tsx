@@ -26,7 +26,7 @@ const FEATURES: Feature[] = [
     intro:
       "Relocate+ builds a roadmap from your destination, visa type and situation, and guides you step by step until you're settled.",
     points: ["Tailored to your move", "Grouped by phase", "Clear progress"],
-    image: "/images/roadmap.webp",
+    image: "/images/roadmap-v3.webp",
     alt: "Relocate+ roadmap with tasks grouped by phase",
   },
   {
@@ -37,7 +37,7 @@ const FEATURES: Feature[] = [
     intro:
       "Your deadlines grouped into this week, this month and coming up. Tap the calendar icon to add any of them to your iPhone calendar.",
     points: ["Add to iPhone calendar", "Add your own dates", "Straight to the task"],
-    image: "/images/agenda.webp",
+    image: "/images/agenda-v3.webp",
     alt: "Relocate+ deadline agenda grouped by this week and this month",
   },
   {
@@ -48,7 +48,7 @@ const FEATURES: Feature[] = [
     intro:
       "See exactly which documents your move needs and upload them as you go. Everything is encrypted and only you can access your files.",
     points: ["Encrypted and private", "Required items flagged", "Progress at a glance"],
-    image: "/images/documents.webp",
+    image: "/images/documents-v3.webp",
     alt: "Relocate+ encrypted document vault with required documents",
   },
   {
@@ -59,7 +59,7 @@ const FEATURES: Feature[] = [
     intro:
       "Starting estimates for your route, from visa fees to deposits and flights, that you adjust to your situation. Then track what you actually spend.",
     points: ["Rough starting estimates", "Track actual spend", "Add your own costs"],
-    image: "/images/budget.webp",
+    image: "/images/budget-v3.webp",
     alt: "Relocate+ moving budget with estimated costs by category",
   },
   {
@@ -70,7 +70,7 @@ const FEATURES: Feature[] = [
     intro:
       "How tax works in the country you're moving to, and what to sort out in the one you're leaving. Explanations with official links, not tax advice.",
     points: ["Moving to and leaving", "Special regimes explained", "Links to official sources"],
-    image: "/images/tax.webp",
+    image: "/images/tax-v3.webp",
     alt: "Relocate+ tax guide for moving to Spain",
   },
   {
@@ -81,7 +81,7 @@ const FEATURES: Feature[] = [
     intro:
       "Add your partner and children. Each person gets their own checklist, including child items like school records and parental consent letters.",
     points: ["A checklist per person", "Child-specific items", "See who's ready"],
-    image: "/images/family.webp",
+    image: "/images/family-v3.webp",
     alt: "Relocate+ family document checklists for a partner and child",
     link: { href: "/guides/moving-abroad-with-kids", label: "Moving abroad with kids: our guide" },
   },
@@ -93,7 +93,7 @@ const FEATURES: Feature[] = [
     intro:
       "Add each pet and get its own checklist for microchips, vaccinations and travel papers, with when to start every step.",
     points: ["Start dates per step", "Critical steps flagged", "One checklist per pet"],
-    image: "/images/pets.webp",
+    image: "/images/pets-v3.webp",
     alt: "Relocate+ pet checklist with microchip and rabies steps",
     link: { href: "/guides/moving-abroad-with-a-dog-or-cat", label: "Moving abroad with a pet: our guide" },
   },
@@ -105,7 +105,7 @@ const FEATURES: Feature[] = [
     intro:
       "Ask about visas, deadlines, taxes, housing or banking. The assistant already knows where you're moving from and to.",
     points: ["Knows your route", "Suggested questions", "Pick up where you left off"],
-    image: "/images/ai.webp",
+    image: "/images/ai-v3.webp",
     alt: "Relocate+ AI assistant for your move",
   },
 ];
