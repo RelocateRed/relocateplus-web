@@ -120,9 +120,9 @@ export default function RoadmapShowcase() {
 
               <Image
                src="/images/roadmap.webp"
-               alt="Relocate+ Roadmap"
-               width={600}
-               height={600}
+               alt="Relocate+ roadmap with tasks grouped by phase"
+               width={1320}
+               height={2680}
                className="w-full"
                sizes="(max-width: 1023px) 320px, 600px"
              />

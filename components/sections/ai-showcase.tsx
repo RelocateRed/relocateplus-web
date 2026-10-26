@@ -29,9 +29,9 @@ export default function AIShowcase() {
 
               <Image
                src="/images/ai.webp"
-               alt="Relocate+ AI"
-               width={600}
-               height={600}
+               alt="Relocate+ AI assistant for your move"
+               width={1320}
+               height={2680}
                className="w-full"
                sizes="(max-width: 1023px) 320px, 600px"
               />

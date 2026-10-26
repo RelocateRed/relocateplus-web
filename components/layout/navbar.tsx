@@ -10,9 +10,9 @@ import Image from "next/image";
 // "/#..." so the links also work from other pages (e.g. /guides)
 const links = [
   { label: "Why", href: "/#why-relocate" },
-  { label: "Roadmaps", href: "/#roadmaps" },
+  { label: "Roadmap", href: "/#roadmaps" },
+  { label: "Deadlines", href: "/#deadlines" },
   { label: "Documents", href: "/#documents" },
-  { label: "Progress", href: "/#progress" },
   { label: "AI", href: "/#ai" },
   { label: "FAQ", href: "/#faq" },
 ];
@@ -33,9 +33,11 @@ export default function Navbar() {
       const scrollPosition = window.scrollY + 140;
 
       for (const section of sections) {
+        // getBoundingClientRect works for anchors nested inside other sections
+        const top = section.getBoundingClientRect().top + window.scrollY;
         if (
-          scrollPosition >= section.offsetTop &&
-          scrollPosition < section.offsetTop + section.offsetHeight
+          scrollPosition >= top &&
+          scrollPosition < top + section.offsetHeight
         ) {
           setActive(`/#${section.id}`);
           break;
@@ -45,7 +47,7 @@ export default function Navbar() {
 
     onScroll();
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

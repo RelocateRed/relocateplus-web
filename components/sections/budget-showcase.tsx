@@ -13,15 +13,15 @@ export default function BudgetShowcase() {
        className="relative overflow-hidden py-20 lg:py-32 bg-white"
 >
 
-      <div className="absolute right-0 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]" />
+      <div className="absolute left-0 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]" />
 
       <Container>
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
 
-          {/* LEFT — text (swapped side for visual rhythm) */}
+          {/* Text */}
 
-          <div>
+          <div className="order-1 lg:order-2">
 
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
               BUDGET TRACKER
@@ -29,17 +29,17 @@ export default function BudgetShowcase() {
 
             <Heading className="mt-6 text-4xl sm:text-5xl">
 
-              Know exactly
+              Know what your move
               <br />
-              what your move costs.
+              will cost.
 
             </Heading>
 
             <Text className="mt-6 text-lg leading-8 lg:mt-8 lg:text-xl lg:leading-9">
 
-              Real cost estimates for your exact destination — visa fees,
-              housing deposits, flights, and more. Track what's estimated
-              against what you actually spend.
+              Starting estimates for your route — visa fees, housing
+              deposits, flights and more — that you adjust to your own
+              situation. Then track what you actually spend.
 
             </Text>
 
@@ -54,11 +54,12 @@ export default function BudgetShowcase() {
                 <div>
 
                   <h3 className="font-semibold text-slate-900">
-                    Destination-specific estimates
+                    Starting estimates for your route
                   </h3>
 
                   <p className="mt-2 leading-7 text-slate-600">
-                    Pre-filled costs based on real data for your corridor.
+                    Common costs are pre-filled as rough estimates. Tap any
+                    item to adjust it to your exact situation.
                   </p>
 
                 </div>
@@ -113,7 +114,7 @@ export default function BudgetShowcase() {
 
           {/* RIGHT — image */}
 
-          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none order-2 lg:order-1">
 
             <div className="absolute inset-0 rounded-[48px] bg-blue-500/5 blur-3xl" />
 
@@ -121,9 +122,9 @@ export default function BudgetShowcase() {
 
               <Image
                 src="/images/budget.webp"
-                alt="Relocate+ Budget Tracker"
-                width={600}
-                height={600}
+                alt="Relocate+ moving budget with estimated costs by category"
+                width={1320}
+                height={2372}
                 className="w-full"
                 sizes="(max-width: 1023px) 320px, 600px"
               />

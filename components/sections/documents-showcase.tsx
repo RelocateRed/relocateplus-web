@@ -10,7 +10,7 @@ export default function DocumentsShowcase() {
   return (
     <Section
        id="documents"
-       className="relative overflow-hidden py-20 lg:py-32 bg-white"
+       className="relative overflow-hidden py-20 lg:py-32 bg-[#F8FBFF]"
 >
 
       <div className="absolute left-0 top-24 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]" />
@@ -21,7 +21,7 @@ export default function DocumentsShowcase() {
 
           {/* LEFT */}
 
-          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none order-2 lg:order-1">
+          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none order-2">
 
             <div className="absolute inset-0 rounded-[48px] bg-blue-500/5 blur-3xl" />
 
@@ -29,9 +29,9 @@ export default function DocumentsShowcase() {
 
               <Image
                src="/images/documents.webp"
-               alt="Relocate+ Documents"
-               width={600}
-               height={600}
+               alt="Relocate+ encrypted document vault with required documents"
+               width={1320}
+               height={2680}
                className="w-full"
                sizes="(max-width: 1023px) 320px, 600px"
              />
@@ -42,7 +42,7 @@ export default function DocumentsShowcase() {
 
           {/* RIGHT */}
 
-          <div className="order-1 lg:order-2">
+          <div className="order-1">
 
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
               SECURE DOCUMENT STORAGE

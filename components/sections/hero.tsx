@@ -10,6 +10,7 @@ import Section from "@/components/ui/section";
 import Heading from "@/components/typography/heading";
 import Text from "@/components/typography/text";
 import FadeIn from "@/components/animations/fade-in";
+import { Float, LineReveal, PopIn } from "@/components/animations/motion";
 
 export default function Hero() {
   return (
@@ -57,13 +58,16 @@ export default function Hero() {
             </p>
 
             <Heading className="mt-6 text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">
-              Plan your move.
-              <br />
-              <span className="bg-gradient-to-r from-[#2563EB] to-[#38BDF8] bg-clip-text text-transparent">
-                Stress less.
-              </span>
-              <br />
-              Move smarter.
+              <LineReveal
+                delay={0.1}
+                lines={[
+                  "Plan your move.",
+                  <span key="s" className="hero-shimmer bg-gradient-to-r from-[#2563EB] via-[#38BDF8] to-[#2563EB] bg-[length:200%_auto] bg-clip-text text-transparent">
+                    Stress less.
+                  </span>,
+                  "Move smarter.",
+                ]}
+              />
             </Heading>
 
             <FadeIn delay={0.1}>
@@ -112,37 +116,45 @@ export default function Hero() {
             </div>
 
             {/* Phone */}
-            <div className="relative z-20">
+            <PopIn delay={0.35} className="relative z-20">
+            <Float amplitude={12} duration={7}>
               {/* Gradient ring border around phone — premium detail */}
               <div className="rounded-[46px] bg-gradient-to-b from-slate-200 via-white to-slate-300 p-[3px] shadow-[0_50px_120px_rgba(15,23,42,.22)]">
                 <div className="overflow-hidden rounded-[43px] border-[9px] border-[#0F172A] bg-black">
                   <Image
-                    src="/images/dashboard-v2.webp"
-                    alt="Relocate+ app dashboard showing relocation roadmap"
-                    width={390}
-                    height={844}
+                    src="/images/home.webp"
+                    alt="Relocate+ home screen showing a move from the Netherlands to Spain, 75% ready"
+                    width={1320}
+                    height={2680}
                     priority
                     className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
                     sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
                   />
                 </div>
               </div>
-            </div>
+            </Float>
+            </PopIn>
 
             {/* Floating cards — desktop only, no changes to content */}
-            <div className="absolute -left-12 top-12 z-30 hidden w-60 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
+            <PopIn delay={0.7} className="absolute -left-12 top-12 z-30 hidden lg:block">
+              <Float amplitude={8} duration={5.5} delay={0.7}>
+              <div className="w-60 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-xl">
                   🌍
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Roadmap</p>
-                  <p className="mt-1 text-sm text-slate-500">18 tasks remaining</p>
+                  <p className="mt-1 text-sm text-slate-500">12 of 14 tasks to go</p>
                 </div>
               </div>
             </div>
+              </Float>
+            </PopIn>
 
-            <div className="absolute -right-10 top-40 z-30 hidden w-64 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
+            <PopIn delay={0.85} className="absolute -right-10 top-40 z-30 hidden lg:block">
+              <Float amplitude={8} duration={6.5} delay={0.85}>
+              <div className="w-64 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl">
               <p className="text-sm font-semibold text-slate-900">Documents</p>
               <div className="mt-4 space-y-3">
                 <div className="flex items-center justify-between">
@@ -154,21 +166,29 @@ export default function Hero() {
                   <span className="font-medium text-emerald-500">✓</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-slate-600">Insurance</span>
+                  <span className="text-sm text-slate-600">NIE number</span>
                   <span className="font-medium text-amber-500">Pending</span>
                 </div>
               </div>
             </div>
+              </Float>
+            </PopIn>
 
-            <div className="absolute -left-8 bottom-28 z-30 hidden w-56 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
+            <PopIn delay={1.0} className="absolute -left-8 bottom-28 z-30 hidden lg:block">
+              <Float amplitude={8} duration={6} delay={1.0}>
+              <div className="w-56 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl">
               <p className="text-sm font-semibold text-slate-900">Progress</p>
               <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100">
-                <div className="h-full w-[68%] rounded-full bg-gradient-to-r from-[#2563EB] to-[#38BDF8]" />
+                <div className="h-full w-[75%] rounded-full bg-gradient-to-r from-[#2563EB] to-[#38BDF8]" />
               </div>
-              <p className="mt-3 text-sm text-slate-500">You're making great progress.</p>
+              <p className="mt-3 text-sm text-slate-500">75% ready for your move.</p>
             </div>
+              </Float>
+            </PopIn>
 
-            <div className="absolute -right-8 bottom-10 z-30 hidden w-64 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl lg:block">
+            <PopIn delay={1.15} className="absolute -right-8 bottom-10 z-30 hidden lg:block">
+              <Float amplitude={8} duration={7} delay={1.15}>
+              <div className="w-64 rounded-3xl border border-white/70 bg-white/90 p-5 shadow-[0_30px_80px_rgba(15,23,42,.12)] backdrop-blur-xl">
               <div className="flex items-start gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
                   ✨
@@ -176,11 +196,13 @@ export default function Hero() {
                 <div>
                   <p className="font-semibold text-slate-900">AI Insight</p>
                   <p className="mt-2 text-sm leading-6 text-slate-500">
-                    Your visa route is ready. Schedule your embassy appointment next.
+                    Your visa route is chosen. Get your Spanish NIE number next.
                   </p>
                 </div>
               </div>
             </div>
+              </Float>
+            </PopIn>
 
           </FadeIn>
 

@@ -29,9 +29,9 @@ export default function FamilyShowcase() {
 
               <Image
                 src="/images/family.webp"
-                alt="Relocate+ Family Tracking"
-                width={600}
-                height={600}
+                alt="Relocate+ family document checklists for a partner and child"
+                width={1320}
+                height={1762}
                 className="w-full"
                 sizes="(max-width: 1023px) 320px, 600px"
               />

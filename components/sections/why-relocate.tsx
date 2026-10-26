@@ -3,6 +3,7 @@ import Section from "@/components/ui/section";
 
 import Heading from "@/components/typography/heading";
 import Text from "@/components/typography/text";
+import { Reveal, WordReveal } from "@/components/animations/motion";
 
 export default function WhyRelocate() {
   return (
@@ -23,13 +24,7 @@ export default function WhyRelocate() {
             </p>
 
             <Heading className="mt-6">
-
-              Moving abroad is hard.
-
-              <br />
-
-              Planning it shouldn't be.
-
+              <WordReveal text="Moving abroad is hard. Planning it shouldn't be." className="block" />
             </Heading>
 
             <Text className="mx-auto mt-8 max-w-2xl text-xl leading-9">
@@ -45,6 +40,7 @@ export default function WhyRelocate() {
 
           <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
+<Reveal delay={0.0}>
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
@@ -61,7 +57,9 @@ export default function WhyRelocate() {
               </p>
 
             </div>
+            </Reveal>
 
+<Reveal delay={0.1}>
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
@@ -78,7 +76,9 @@ export default function WhyRelocate() {
               </p>
 
             </div>
+            </Reveal>
 
+<Reveal delay={0.2}>
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
@@ -95,7 +95,9 @@ export default function WhyRelocate() {
               </p>
 
             </div>
+            </Reveal>
 
+<Reveal delay={0.3}>
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
@@ -112,6 +114,7 @@ export default function WhyRelocate() {
               </p>
 
             </div>
+            </Reveal>
 
           </div>
 

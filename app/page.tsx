@@ -1,30 +1,27 @@
 import Navbar from "@/components/layout/navbar";
 import Hero from "@/components/sections/hero";
+import RouteMarquee from "@/components/sections/route-marquee";
 import WhyRelocate from "@/components/sections/why-relocate";
-import RoadmapShowcase from "@/components/sections/roadmap-showcase";
-import DocumentsShowcase from "@/components/sections/documents-showcase";
-import BudgetShowcase from "@/components/sections/budget-showcase";
-import FamilyShowcase from "@/components/sections/family-showcase";
-import ProgressShowcase from "@/components/sections/progress-showcase";
-import AIShowcase from "@/components/sections/ai-showcase";
+import AppTour from "@/components/sections/app-tour";
 import DownloadCTA from "@/components/sections/download-cta";
 import FAQ from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
+import { Reveal } from "@/components/animations/motion";
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
       <Hero />
+      <RouteMarquee />
       <WhyRelocate />
-      <RoadmapShowcase />
-      <DocumentsShowcase />
-      <BudgetShowcase />
-      <FamilyShowcase />
-      <ProgressShowcase />
-      <AIShowcase />
-      <DownloadCTA />
-      <FAQ />
+      <AppTour />
+      <Reveal y={40}>
+        <DownloadCTA />
+      </Reveal>
+      <Reveal y={40}>
+        <FAQ />
+      </Reveal>
       <Footer />
     </>
   );
