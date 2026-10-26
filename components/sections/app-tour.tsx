@@ -247,7 +247,8 @@ export default function AppTour() {
             />
             <div className="relative h-full max-h-[min(72svh,720px)] lg:h-[min(76svh,720px)]">
               <div className="h-full rounded-[44px] bg-gradient-to-b from-slate-500/60 via-slate-700/40 to-slate-500/60 p-[3px] shadow-[0_50px_120px_rgba(0,0,0,.45)]">
-                <div className="relative h-full overflow-hidden rounded-[41px] border-[8px] border-[#05080F] bg-[#F4F3EF]" style={{ aspectRatio: "1320 / 2680" }}>
+                <div className="relative h-full overflow-hidden rounded-[41px] border-[8px] border-[#05080F] bg-[#F4F3EF]" style={{ aspectRatio: "1320 / 2868" }}>
+                  <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[1.3%] z-10 h-[3.4%] w-[29%] -translate-x-1/2 rounded-full bg-black" />
                   {FEATURES.map((f, i) => (
                     <Image
                       key={f.id}
