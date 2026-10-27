@@ -28,7 +28,7 @@ export default function RouteMarquee() {
           <Link
             href={it.href}
             tabIndex={hidden ? -1 : undefined}
-            className="block whitespace-nowrap rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 shadow-[0_6px_20px_rgba(15,23,42,.05)] transition-colors hover:border-blue-200 hover:text-[#2563EB]"
+            className="block whitespace-nowrap rounded-full border border-slate-200 bg-surface px-5 py-2.5 text-sm font-medium text-slate-700 shadow-[0_6px_20px_rgba(15,23,42,.05)] transition-colors hover:border-blue-200 hover:text-brand"
           >
             {it.label}
           </Link>
@@ -38,9 +38,9 @@ export default function RouteMarquee() {
   );
 
   return (
-    <section aria-label="Moving guides by route" className="marquee-wrap relative overflow-hidden border-y border-slate-100 bg-[#FAFBFF] py-6">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#FAFBFF] to-transparent sm:w-32" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#FAFBFF] to-transparent sm:w-32" />
+    <section aria-label="Moving guides by route" className="marquee-wrap relative overflow-hidden border-y border-slate-100 bg-page py-6">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-page to-transparent sm:w-32" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-page to-transparent sm:w-32" />
       <div className="marquee flex w-max">
         {row(false)}
         {row(true)}

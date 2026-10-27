@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
+/* Site colour tokens. Light values here, dark values further down. */
+@theme {
+  --color-surface: #ffffff;   /* cards, panels */
+  --color-page: #fafbff;      /* soft page background */
+  --color-page-alt: #f8fbff;  /* footer and alternate sections */
+  --color-tint: #f3f7ff;      /* hover and highlight backgrounds */
+  --color-brand: #2563eb;     /* blue text and links */
+  --color-navy: #0b1530;      /* dark buttons */
+  --color-navy-hover: #152744;
+}
+
 :root {
+  color-scheme: light dark;
+
   /* Colors */
   --background: #ffffff;
   --foreground: #0f172a;
@@ -90,4 +103,72 @@ section {
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-shimmer { animation: none; }
+}
+
+/* ---------- Dark mode: follows the visitor's system setting ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #070d1c;
+    --foreground: #f1f5f9;
+    --muted: #8e9bb0;
+    --border: #22304b;
+    --card: #0e1830;
+    --color-surface: #0e1830;
+    --color-page: #070d1c;
+    --color-page-alt: #0a1225;
+    --color-tint: #13213f;
+    --color-brand: #7aa2ff;
+    --color-navy: #2563eb;
+    --color-navy-hover: #1d4ed8;
+    --color-slate-50: #0f1a30;
+    --color-slate-100: #16223b;
+    --color-slate-200: #22304b;
+    --color-slate-300: #34445f;
+    --color-slate-400: #6d7d96;
+    --color-slate-500: #8e9bb0;
+    --color-slate-600: #aab6c8;
+    --color-slate-700: #c8d2df;
+    --color-slate-800: #dee5ee;
+    --color-slate-900: #f1f5f9;
+    --color-neutral-200: #22304b;
+    --color-blue-50: #12224a;
+    --color-blue-100: #1a2e5c;
+    --color-blue-200: #264179;
+    --color-blue-700: #9db9ff;
+    --color-amber-50: #251c0c;
+    --color-amber-100: #3a2b10;
+    --color-amber-200: #5c4517;
+    --color-amber-800: #fcd38a;
+    --color-emerald-50: #0c2a20;
+    --color-emerald-200: #165a40;
+    --color-emerald-700: #6ee7b7;
+    --color-green-50: #0e2a18;
+    --color-green-600: #4ade80;
+    --color-green-700: #86efac;
+    --color-rose-50: #2e0f18;
+    --color-rose-200: #6b1f33;
+    --color-rose-700: #fda4af;
+    --color-red-50: #2e1010;
+  }
+}
+
+/* Sections that are always dark (app tour, download banner) keep their original colours. */
+.on-dark {
+  --color-surface: #ffffff;
+  --color-page: #fafbff;
+  --color-page-alt: #f8fbff;
+  --color-tint: #f3f7ff;
+  --color-brand: #2563eb;
+  --color-navy: #0b1530;
+  --color-navy-hover: #152744;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
 }

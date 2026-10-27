@@ -9,7 +9,7 @@ export default function WhyRelocate() {
   return (
     <Section
       id="why-relocate"
-      className="relative overflow-hidden bg-white"
+      className="relative overflow-hidden bg-surface"
 >
       <div className="absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-blue-500/5 blur-[170px]" />
 
@@ -19,7 +19,7 @@ export default function WhyRelocate() {
 
           <div className="mx-auto max-w-3xl text-center">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               WHY RELOCATE+
             </p>
 
@@ -41,7 +41,7 @@ export default function WhyRelocate() {
           <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
 <Reveal delay={0.0}>
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
                 🌍
@@ -60,7 +60,7 @@ export default function WhyRelocate() {
             </Reveal>
 
 <Reveal delay={0.1}>
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
                 🔒
@@ -79,7 +79,7 @@ export default function WhyRelocate() {
             </Reveal>
 
 <Reveal delay={0.2}>
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
                 📈
@@ -98,7 +98,7 @@ export default function WhyRelocate() {
             </Reveal>
 
 <Reveal delay={0.3}>
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)] transition-all duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-[0_30px_80px_rgba(15,23,42,.10)]">
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl">
                 ✨

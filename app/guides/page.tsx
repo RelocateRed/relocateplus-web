@@ -42,7 +42,7 @@ export default function GuidesHub() {
         href={`/guides/${g.slug}`}
         className="block h-full rounded-[24px] border border-slate-200 p-6 transition hover:-translate-y-0.5 hover:border-[#2563EB]/40 hover:shadow-[0_15px_40px_rgba(15,23,42,.06)]"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#2563EB]">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
           {g.kind === "route" ? `${g.fromName.replace(/^the /, "")} → ${g.toName}` : g.kind === "visa" ? `${g.toName} visa` : "How-to"}
           {g.status === "draft" ? " · draft" : ""}
         </p>
@@ -56,11 +56,11 @@ export default function GuidesHub() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toScript(itemList) }} />
       <Navbar />
-      <main className="bg-white pb-24 pt-36">
+      <main className="bg-surface pb-24 pt-36">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">Moving guides</p>
-            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-[#0F172A] md:text-5xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">Moving guides</p>
+            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-slate-900 md:text-5xl">
               Moving abroad, route by route
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-600">

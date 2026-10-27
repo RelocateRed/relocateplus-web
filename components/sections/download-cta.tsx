@@ -11,7 +11,7 @@ export default function DownloadCTA() {
   return (
     <Section
       id="download"
-      className="relative overflow-hidden bg-[#071426]"
+      className="on-dark relative overflow-hidden bg-[#071426]"
 >
 
       {/* Background */}

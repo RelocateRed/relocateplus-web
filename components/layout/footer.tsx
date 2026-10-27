@@ -4,7 +4,7 @@ import Container from "@/components/ui/container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-slate-200 bg-surface">
       <Container>
         <div className="grid gap-14 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
 

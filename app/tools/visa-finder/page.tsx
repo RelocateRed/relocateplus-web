@@ -80,10 +80,10 @@ export default async function VisaFinderPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#FAFBFF] pb-24 pt-32 lg:pt-40">
+      <main className="bg-page pb-24 pt-32 lg:pt-40">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">Free tool</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">Free tool</p>
             <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
               Which visa could you get?
             </h1>
@@ -101,7 +101,7 @@ export default async function VisaFinderPage() {
             <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Questions about the visa finder</h2>
             <div className="mt-6 space-y-3">
               {FAQS.map((f) => (
-                <details key={f.q} className="group rounded-2xl border border-slate-200 bg-white p-5" open>
+                <details key={f.q} className="group rounded-2xl border border-slate-200 bg-surface p-5" open>
                   <summary className="cursor-pointer list-none font-semibold text-slate-900">{f.q}</summary>
                   <p className="mt-3 leading-7 text-slate-600">{f.a}</p>
                 </details>
@@ -109,7 +109,7 @@ export default async function VisaFinderPage() {
             </div>
           </section>
 
-          <section className="mt-16 max-w-3xl rounded-[32px] bg-[#0B1530] p-8 text-white sm:p-10">
+          <section className="mt-16 max-w-3xl on-dark rounded-[32px] bg-[#0B1530] p-8 text-white sm:p-10">
             <h2 className="text-2xl font-bold sm:text-3xl">Found your route? Plan the whole move.</h2>
             <p className="mt-4 leading-7 text-slate-300">
               Relocate+ turns your visa into a step-by-step roadmap with deadlines, a document vault for the whole family and a moving budget.

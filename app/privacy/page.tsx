@@ -12,7 +12,7 @@ export default function PrivacyPage() {
     <>
       <Navbar />
 
-      <Section className="relative overflow-hidden bg-[#FAFBFF] pt-40">
+      <Section className="relative overflow-hidden bg-page pt-40">
 
         <div className="absolute left-1/2 top-[-350px] h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[180px]" />
 
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
 
           <div className="mx-auto max-w-4xl text-center">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               LEGAL
             </p>
 
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
 
       </Section>
 
-      <Section className="bg-white">
+      <Section className="bg-surface">
 
         <Container>
 
@@ -292,7 +292,7 @@ export default function PrivacyPage() {
                 how your information is handled, please contact us at:
               </p>
 
-              <p className="mt-4 text-lg font-semibold text-[#2563EB]">
+              <p className="mt-4 text-lg font-semibold text-brand">
                 info@relocate-plus.com
               </p>
 

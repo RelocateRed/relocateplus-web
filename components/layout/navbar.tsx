@@ -84,7 +84,7 @@ export default function Navbar() {
 
   const dark = onDark && !menuOpen;
   // "!" because the global a { color: inherit } rule would otherwise win
-  const linkBase = dark ? "!text-slate-300 hover:!text-white" : "!text-slate-600 hover:!text-[#2563EB]";
+  const linkBase = dark ? "!text-slate-300 hover:!text-white" : "!text-slate-600 hover:!text-brand";
   const linkOn = dark ? "!text-white" : "!text-slate-900";
 
   const openFeatures = () => {
@@ -99,11 +99,11 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         menuOpen
-          ? "bg-white"
+          ? "bg-surface"
           : dark
-            ? "border-b border-white/10 bg-[#0B1530]/80 backdrop-blur-2xl"
+            ? "on-dark border-b border-white/10 bg-[#0B1530]/80 backdrop-blur-2xl"
             : scrolled
-              ? "border-b border-slate-200/70 bg-white/80 backdrop-blur-2xl shadow-[0_8px_40px_rgba(15,23,42,.06)]"
+              ? "border-b border-slate-200/70 bg-surface/80 backdrop-blur-2xl shadow-[0_8px_40px_rgba(15,23,42,.06)]"
               : "bg-transparent"
       }`}
     >
@@ -163,13 +163,13 @@ export default function Navbar() {
                   transition={{ duration: 0.18 }}
                   className="absolute left-1/2 top-full w-[560px] -translate-x-1/2 pt-4"
                 >
-                  <div className="grid grid-cols-2 gap-1 rounded-3xl border border-slate-200 bg-white p-3 shadow-[0_30px_80px_rgba(15,23,42,.14)]">
+                  <div className="grid grid-cols-2 gap-1 rounded-3xl border border-slate-200 bg-surface p-3 shadow-[0_30px_80px_rgba(15,23,42,.14)]">
                     {FEATURES.map((f) => (
                       <Link
                         key={f.href}
                         href={f.href}
                         onClick={() => setFeaturesOpen(false)}
-                        className="flex items-start gap-3 rounded-2xl p-3 transition-colors hover:bg-[#F3F7FF]"
+                        className="flex items-start gap-3 rounded-2xl p-3 transition-colors hover:bg-tint"
                       >
                         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-base">
                           {f.icon}
@@ -236,9 +236,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="h-[calc(100svh-80px)] overflow-y-auto bg-white px-5 pb-10 pt-2 sm:px-8 lg:hidden"
+            className="h-[calc(100svh-80px)] overflow-y-auto bg-surface px-5 pb-10 pt-2 sm:px-8 lg:hidden"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2563EB]">Features</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Features</p>
             <div className="mt-4 grid grid-cols-2 gap-2">
               {FEATURES.map((f, i) => (
                 <motion.div

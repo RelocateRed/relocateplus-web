@@ -23,7 +23,7 @@ function Cite({ ids, index }: { ids: string[]; index: Map<string, number> }) {
         <a
           key={id}
           href={`#source-${id}`}
-          className="ml-0.5 text-[#2563EB] hover:underline"
+          className="ml-0.5 text-brand hover:underline"
           aria-label={`Source ${index.get(id)}`}
         >
           [{index.get(id)}]
@@ -37,7 +37,7 @@ function H2({ id, children }: { id: string; children: React.ReactNode }) {
   return (
     <h2
       id={id}
-      className="scroll-mt-28 font-heading text-2xl font-bold tracking-[-0.02em] text-[#0F172A] md:text-3xl"
+      className="scroll-mt-28 font-heading text-2xl font-bold tracking-[-0.02em] text-slate-900 md:text-3xl"
     >
       {children}
     </h2>
@@ -49,9 +49,9 @@ function AppBox({ guide, variant }: { guide: Guide; variant: "inline" | "end" })
   return (
     <aside
       aria-label="Plan this move with Relocate+"
-      className="rounded-[28px] border border-blue-100 bg-gradient-to-br from-[#F3F7FF] to-white p-7 md:p-8"
+      className="rounded-[28px] border border-blue-100 bg-gradient-to-br from-tint to-surface p-7 md:p-8"
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2563EB]">
+      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">
         Plan it in Relocate+
       </p>
       <p className="mt-3 text-lg leading-8 text-slate-700">{guide.appPitch}</p>
@@ -72,7 +72,7 @@ function AppBox({ guide, variant }: { guide: Guide; variant: "inline" | "end" })
           {PLAY_STORE_URL ? (
             <a
               href={PLAY_STORE_URL}
-              className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-[#2563EB]/40"
+              className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-surface px-6 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-[#2563EB]/40"
               rel="noopener"
             >
               Get it on Google Play
@@ -111,14 +111,14 @@ export default function GuideArticle({
   ];
 
   return (
-    <article className="bg-white pb-24 pt-32">
+    <article className="bg-surface pb-24 pt-32">
       <Container>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="text-sm text-slate-500">
           <ol className="flex flex-wrap items-center gap-2">
-            <li><Link href="/" className="hover:text-[#2563EB]">Home</Link></li>
+            <li><Link href="/" className="hover:text-brand">Home</Link></li>
             <li aria-hidden>›</li>
-            <li><Link href="/guides" className="hover:text-[#2563EB]">Moving guides</Link></li>
+            <li><Link href="/guides" className="hover:text-brand">Moving guides</Link></li>
             <li aria-hidden>›</li>
             <li className="text-slate-700">{guide.toName}</li>
           </ol>
@@ -132,7 +132,7 @@ export default function GuideArticle({
 
         {/* Header */}
         <header className="mt-6 max-w-4xl">
-          <h1 className="font-heading text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-[#0F172A] md:text-5xl">
+          <h1 className="font-heading text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-slate-900 md:text-5xl">
             {guide.h1}
           </h1>
           <p className="mt-5 text-sm text-slate-500">
@@ -143,8 +143,8 @@ export default function GuideArticle({
             against {guide.sources.length} sources ({officialCount} official). By the Relocate+ team.
           </p>
 
-          <div className="mt-8 rounded-[28px] border border-slate-200 bg-[#F8FBFF] p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#2563EB]">
+          <div className="mt-8 rounded-[28px] border border-slate-200 bg-page-alt p-6 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">
               Short answer
             </p>
             {guide.summary.map((p, i) => (
@@ -223,7 +223,7 @@ export default function GuideArticle({
                     <span className="absolute -left-[37px] flex h-6 w-6 items-center justify-center rounded-full bg-[#2563EB] text-xs font-bold text-white">
                       {i + 1}
                     </span>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2563EB]">{s.when}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">{s.when}</p>
                     <h3 className="mt-1 text-lg font-semibold text-slate-900">{s.title}</h3>
                     <p className="mt-1 leading-7 text-slate-700">
                       {s.detail}
@@ -359,7 +359,7 @@ export default function GuideArticle({
                 {guide.sources.map((s: Source, i) => (
                   <li key={s.id} id={`source-${s.id}`} className="scroll-mt-28 text-slate-700">
                     <span className="font-semibold">[{i + 1}]</span>{" "}
-                    <a href={s.url} className="text-[#2563EB] hover:underline" rel="noopener nofollow" target="_blank">
+                    <a href={s.url} className="text-brand hover:underline" rel="noopener nofollow" target="_blank">
                       {s.title}
                     </a>{" "}
                     — {s.publisher}
@@ -370,7 +370,7 @@ export default function GuideArticle({
               </ol>
               <p className="mt-6 text-sm text-slate-500">
                 Immigration rules change often. Always confirm requirements with the consulate or authority that handles your application before you book or pay for anything. Spotted something out of date?{" "}
-                <Link href="/contact" className="text-[#2563EB] hover:underline">Tell us</Link>.
+                <Link href="/contact" className="text-brand hover:underline">Tell us</Link>.
               </p>
             </section>
 
@@ -380,7 +380,7 @@ export default function GuideArticle({
                 <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                   {related.map((r) => (
                     <li key={r.slug}>
-                      <Link href={`/guides/${r.slug}`} className="block rounded-2xl border border-slate-200 px-5 py-4 font-medium text-slate-800 transition hover:border-[#2563EB]/40 hover:text-[#2563EB]">
+                      <Link href={`/guides/${r.slug}`} className="block rounded-2xl border border-slate-200 px-5 py-4 font-medium text-slate-800 transition hover:border-[#2563EB]/40 hover:text-brand">
                         {r.h1}
                       </Link>
                     </li>
@@ -397,7 +397,7 @@ export default function GuideArticle({
               <ul className="mt-4 space-y-2 text-sm">
                 {toc.map((t) => (
                   <li key={t.id}>
-                    <a href={`#${t.id}`} className="text-slate-600 hover:text-[#2563EB]">{t.label}</a>
+                    <a href={`#${t.id}`} className="text-slate-600 hover:text-brand">{t.label}</a>
                   </li>
                 ))}
               </ul>

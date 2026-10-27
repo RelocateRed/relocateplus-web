@@ -14,7 +14,7 @@ export default function SupportPage() {
 
       {/* Hero */}
 
-      <Section className="relative overflow-hidden bg-[#FAFBFF] pt-40">
+      <Section className="relative overflow-hidden bg-page pt-40">
 
         <div className="absolute left-1/2 top-[-350px] h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[180px]" />
 
@@ -22,7 +22,7 @@ export default function SupportPage() {
 
           <div className="mx-auto max-w-4xl text-center">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               SUPPORT
             </p>
 
@@ -43,13 +43,13 @@ export default function SupportPage() {
 
       {/* Support Categories */}
 
-      <Section className="bg-white">
+      <Section className="bg-surface">
 
         <Container>
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-xl font-semibold text-slate-900">
                 Account
@@ -61,7 +61,7 @@ export default function SupportPage() {
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-xl font-semibold text-slate-900">
                 Subscription
@@ -73,7 +73,7 @@ export default function SupportPage() {
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-xl font-semibold text-slate-900">
                 Documents
@@ -85,7 +85,7 @@ export default function SupportPage() {
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-xl font-semibold text-slate-900">
                 Bug Reports
@@ -105,7 +105,7 @@ export default function SupportPage() {
 
       {/* Contact */}
 
-      <Section className="bg-[#F8FBFF]">
+      <Section className="bg-page-alt">
 
         <Container>
 
@@ -122,13 +122,13 @@ export default function SupportPage() {
 
             </Text>
 
-            <div className="mt-12 rounded-[32px] border border-slate-200 bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="mt-12 rounded-[32px] border border-slate-200 bg-surface p-10 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <p className="text-sm uppercase tracking-[0.25em] text-slate-500">
                 SUPPORT EMAIL
               </p>
 
-              <p className="mt-4 text-2xl font-semibold text-[#2563EB]">
+              <p className="mt-4 text-2xl font-semibold text-brand">
                 support@relocate-plus.com
               </p>
 

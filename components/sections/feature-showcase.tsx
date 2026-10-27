@@ -39,7 +39,7 @@ export default function FeatureShowcase({
   return (
     <Section
       id={id}
-      className={`relative overflow-hidden py-20 lg:py-32 ${tint ? "bg-[#F8FBFF]" : "bg-white"}`}
+      className={`relative overflow-hidden py-20 lg:py-32 ${tint ? "bg-page-alt" : "bg-surface"}`}
     >
       <div
         className={`absolute ${imageLeft ? "left-0" : "right-0"} top-20 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]`}
@@ -49,7 +49,7 @@ export default function FeatureShowcase({
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
           {/* Text */}
           <div className={imageLeft ? "order-1 lg:order-2" : "order-1"}>
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               {eyebrow}
             </p>
 
@@ -62,7 +62,7 @@ export default function FeatureShowcase({
             <div className="mt-8 space-y-6 lg:mt-12 lg:space-y-8">
               {features.map((f) => (
                 <div key={f.title} className="flex gap-5">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                     {f.icon}
                   </div>
                   <div>
@@ -76,7 +76,7 @@ export default function FeatureShowcase({
             {link ? (
               <Link
                 href={link.href}
-                className="mt-10 inline-flex items-center gap-2 font-semibold text-[#2563EB] hover:underline"
+                className="mt-10 inline-flex items-center gap-2 font-semibold text-brand hover:underline"
               >
                 {link.label} <span aria-hidden="true">→</span>
               </Link>
@@ -88,7 +88,7 @@ export default function FeatureShowcase({
             className={`relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none ${imageLeft ? "order-2 lg:order-1" : "order-2"}`}
           >
             <div className="absolute inset-0 rounded-[48px] bg-blue-500/5 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-white shadow-[0_40px_120px_rgba(15,23,42,.08)]">
+            <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-surface shadow-[0_40px_120px_rgba(15,23,42,.08)]">
               <Image
                 src={image.src}
                 alt={image.alt}

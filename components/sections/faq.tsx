@@ -41,14 +41,14 @@ export default function FAQ() {
   return (
     <Section
       id="faq"
-      className="bg-white"
+      className="bg-surface"
 >
 
       <Container>
 
         <div className="mx-auto max-w-3xl text-center">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
             FAQ
           </p>
 
@@ -70,7 +70,7 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,.05)] transition-all"
+                className="overflow-hidden rounded-[28px] border border-slate-200 bg-surface shadow-[0_20px_60px_rgba(15,23,42,.05)] transition-all"
               >
 
                 <button
@@ -84,7 +84,7 @@ export default function FAQ() {
                     {faq.question}
                   </span>
 
-                  <span className="text-3xl font-light text-[#2563EB]">
+                  <span className="text-3xl font-light text-brand">
                     {isOpen ? "−" : "+"}
                   </span>
 

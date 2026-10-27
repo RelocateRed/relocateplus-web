@@ -10,7 +10,7 @@ export default function RoadmapShowcase() {
   return (
     <Section
        id="roadmaps"
-       className="relative overflow-hidden py-20 lg:py-32 bg-[#F8FBFF]"
+       className="relative overflow-hidden py-20 lg:py-32 bg-page-alt"
 >
 
       <div className="absolute right-0 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]" />
@@ -23,7 +23,7 @@ export default function RoadmapShowcase() {
 
           <div>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               PERSONALIZED ROADMAPS
             </p>
 
@@ -48,7 +48,7 @@ export default function RoadmapShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                   ✓
                 </div>
 
@@ -68,7 +68,7 @@ export default function RoadmapShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                   ✓
                 </div>
 
@@ -88,7 +88,7 @@ export default function RoadmapShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                   ✓
                 </div>
 
@@ -116,7 +116,7 @@ export default function RoadmapShowcase() {
 
             <div className="absolute inset-0 rounded-[48px] bg-blue-500/5 blur-3xl" />
 
-            <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-white shadow-[0_40px_120px_rgba(15,23,42,.08)]">
+            <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-surface shadow-[0_40px_120px_rgba(15,23,42,.08)]">
 
               <Image
                src="/images/roadmap.webp"

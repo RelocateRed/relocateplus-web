@@ -47,12 +47,12 @@ export default async function SharedRoadmapPage({
     : 0;
 
   return (
-    <div className="min-h-screen bg-[#FAFBFF] py-16 px-6">
+    <div className="min-h-screen bg-page py-16 px-6">
       <div className="mx-auto max-w-2xl">
 
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#2563EB] mb-3">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand mb-3">
             RELOCATE+
           </p>
           <h1 className="text-3xl font-bold text-slate-900 mb-2">
@@ -66,7 +66,7 @@ export default async function SharedRoadmapPage({
         </div>
 
         {/* Hero card */}
-        <div className="rounded-3xl bg-[#0C1A2E] p-8 mb-6 text-white shadow-xl">
+        <div className="on-dark rounded-3xl bg-[#0C1A2E] p-8 mb-6 text-white shadow-xl">
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-xs uppercase tracking-wider text-white/40 mb-1">
@@ -86,7 +86,7 @@ export default async function SharedRoadmapPage({
           </div>
           <div className="h-2 bg-white/15 rounded-full overflow-hidden">
             <div
-              className="h-full bg-white rounded-full"
+              className="h-full bg-surface rounded-full"
               style={{ width: `${progressPercent}%` }}
             />
           </div>
@@ -94,7 +94,7 @@ export default async function SharedRoadmapPage({
 
         {/* Phases */}
         {share.phases?.length > 0 && (
-          <div className="rounded-2xl bg-white p-6 mb-8 shadow-sm border border-slate-100">
+          <div className="rounded-2xl bg-surface p-6 mb-8 shadow-sm border border-slate-100">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
               Journey phases
             </p>

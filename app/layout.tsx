@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { organizationJsonLd, toScript } from "@/lib/guides/jsonld";
@@ -12,6 +12,15 @@ const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
 });
+
+// Browser bar colour and native controls follow the visitor's light/dark setting
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#070d1c" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://relocate-plus.com"),

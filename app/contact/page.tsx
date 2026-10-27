@@ -14,7 +14,7 @@ export default function ContactPage() {
 
       {/* Hero */}
 
-      <Section className="relative overflow-hidden bg-[#FAFBFF] pt-40">
+      <Section className="relative overflow-hidden bg-page pt-40">
 
         <div className="absolute left-1/2 top-[-350px] h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[180px]" />
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
 
           <div className="mx-auto max-w-4xl text-center">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               CONTACT
             </p>
 
@@ -47,13 +47,13 @@ export default function ContactPage() {
 
       {/* Contact Cards */}
 
-      <Section className="bg-white">
+      <Section className="bg-surface">
 
         <Container>
 
           <div className="grid gap-8 md:grid-cols-3">
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-2xl font-semibold text-slate-900">
                 General Support
@@ -63,13 +63,13 @@ export default function ContactPage() {
                 Need help using Relocate+ or have a question about your account?
               </p>
 
-              <p className="mt-8 font-semibold text-[#2563EB]">
+              <p className="mt-8 font-semibold text-brand">
                 support@relocate-plus.com
               </p>
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-2xl font-semibold text-slate-900">
                 Business
@@ -79,13 +79,13 @@ export default function ContactPage() {
                 Interested in partnerships, media or collaboration opportunities?
               </p>
 
-              <p className="mt-8 font-semibold text-[#2563EB]">
+              <p className="mt-8 font-semibold text-brand">
                 info@relocate-plus.com
               </p>
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-2xl font-semibold text-slate-900">
                 Response Time
@@ -105,7 +105,7 @@ export default function ContactPage() {
 
       {/* Closing */}
 
-      <Section className="bg-[#F8FBFF]">
+      <Section className="bg-page-alt">
 
         <Container>
 

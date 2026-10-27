@@ -15,7 +15,7 @@ export default function Heading({
   return (
     <Component
       className={cn(
-        "font-heading font-bold leading-[0.95] tracking-[-0.04em] text-[#0F172A]",
+        "font-heading font-bold leading-[0.95] tracking-[-0.04em] text-slate-900",
         "text-5xl md:text-6xl lg:text-7xl",
         className
       )}

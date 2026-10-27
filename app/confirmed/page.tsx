@@ -12,7 +12,7 @@ export default async function ConfirmedPage({
   const isEmailChange = type === 'email_change';
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-surface px-6 text-center">
       <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-green-50">
         <span className="text-2xl text-green-600">✓</span>
       </div>
@@ -29,7 +29,7 @@ export default async function ConfirmedPage({
 
       <a
         href="relocatplus://"
-        className="mb-4 w-full max-w-xs rounded-xl bg-[#0A1832] py-3.5 text-center font-semibold text-white hover:bg-[#152744]"
+        className="mb-4 w-full max-w-xs rounded-xl bg-navy py-3.5 text-center font-semibold text-white hover:bg-navy-hover"
       >
         Open Relocate+
       </a>

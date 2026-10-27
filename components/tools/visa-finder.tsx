@@ -171,20 +171,20 @@ export default function VisaFinder({ rates }: { rates: Rates }) {
   }, [situation, passport, cur, income, savings, age, partner, children, rates]);
 
   const inputCls =
-    "mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition focus:border-[#2563EB] focus:ring-4 focus:ring-blue-100";
+    "mt-2 w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3 text-base text-slate-900 outline-none transition focus:border-[#2563EB] focus:ring-4 focus:ring-blue-100";
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,420px)_1fr] lg:gap-14">
       {/* FORM */}
       <form className="space-y-8" onSubmit={(e) => e.preventDefault()} aria-label="Your situation">
         <fieldset>
-          <legend className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2563EB]">1 · Your situation</legend>
+          <legend className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">1 · Your situation</legend>
           <div className="mt-4 grid gap-2">
             {SITUATIONS.map((s) => (
               <label
                 key={s.id}
                 className={`flex cursor-pointer items-center gap-4 rounded-2xl border px-4 py-3 transition ${
-                  situation === s.id ? "border-[#2563EB] bg-blue-50/60 ring-2 ring-blue-100" : "border-slate-200 bg-white hover:border-slate-300"
+                  situation === s.id ? "border-[#2563EB] bg-blue-50/60 ring-2 ring-blue-100" : "border-slate-200 bg-surface hover:border-slate-300"
                 }`}
               >
                 <input
@@ -206,13 +206,13 @@ export default function VisaFinder({ rates }: { rates: Rates }) {
         </fieldset>
 
         <fieldset>
-          <legend className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2563EB]">2 · Your passport</legend>
+          <legend className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">2 · Your passport</legend>
           <div className="mt-4 grid grid-cols-2 gap-2">
             {PASSPORTS.map((p) => (
               <label
                 key={p.id}
                 className={`cursor-pointer rounded-2xl border px-4 py-3 text-sm font-medium transition ${
-                  passport === p.id ? "border-[#2563EB] bg-blue-50/60 text-slate-900 ring-2 ring-blue-100" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+                  passport === p.id ? "border-[#2563EB] bg-blue-50/60 text-slate-900 ring-2 ring-blue-100" : "border-slate-200 bg-surface text-slate-700 hover:border-slate-300"
                 }`}
               >
                 <input type="radio" name="passport" value={p.id} checked={passport === p.id} onChange={() => setPassport(p.id)} className="sr-only" />
@@ -223,7 +223,7 @@ export default function VisaFinder({ rates }: { rates: Rates }) {
         </fieldset>
 
         <fieldset>
-          <legend className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2563EB]">3 · Money and family</legend>
+          <legend className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">3 · Money and family</legend>
           <div className="mt-4 grid grid-cols-[1fr_auto] gap-3">
             <label className="block text-sm font-medium text-slate-700">
               Monthly income before tax
@@ -272,7 +272,7 @@ export default function VisaFinder({ rates }: { rates: Rates }) {
       {/* RESULTS */}
       <section aria-live="polite" aria-label="Results">
         {!situation ? (
-          <div className="flex h-full min-h-[260px] items-center justify-center rounded-[32px] border border-dashed border-slate-300 bg-white/60 p-10 text-center">
+          <div className="flex h-full min-h-[260px] items-center justify-center rounded-[32px] border border-dashed border-slate-300 bg-surface/60 p-10 text-center">
             <p className="max-w-sm text-slate-500">Pick your situation to see which visas fit — then add your income to check the money rules.</p>
           </div>
         ) : (
@@ -285,21 +285,21 @@ export default function VisaFinder({ rates }: { rates: Rates }) {
               <div className="rounded-3xl border border-blue-200 bg-blue-50 p-5 text-sm leading-6 text-slate-700">
                 <strong className="text-slate-900">EU citizen?</strong> You have the right to live, work, study, look for a job or retire in
                 Spain, Portugal, Germany or the Netherlands without these visas. You may need to register your residence after 3 months.{" "}
-                <a href={EU_FREE_MOVEMENT_SOURCE.url} target="_blank" rel="noopener noreferrer" className="font-semibold !text-[#2563EB] underline">
+                <a href={EU_FREE_MOVEMENT_SOURCE.url} target="_blank" rel="noopener noreferrer" className="font-semibold !text-brand underline">
                   Source
                 </a>
               </div>
             ) : null}
 
             {results.length === 0 && !freeMovement ? (
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 text-slate-600">
+              <div className="rounded-3xl border border-slate-200 bg-surface p-6 text-slate-600">
                 We don't have a guide for this combination yet. Try another situation, or browse all{" "}
-                <Link href="/guides" className="font-semibold !text-[#2563EB] underline">moving guides</Link>.
+                <Link href="/guides" className="font-semibold !text-brand underline">moving guides</Link>.
               </div>
             ) : null}
 
             {results.map(({ route, status, detail }) => (
-              <article key={route.id} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,.05)] sm:p-6">
+              <article key={route.id} className="rounded-3xl border border-slate-200 bg-surface p-5 shadow-[0_10px_30px_rgba(15,23,42,.05)] sm:p-6">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <p className="text-sm font-medium text-slate-500">
@@ -320,7 +320,7 @@ export default function VisaFinder({ rates }: { rates: Rates }) {
                   ))}
                 </ul>
                 <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                  <Link href={route.guide} className="font-semibold !text-[#2563EB] hover:underline">
+                  <Link href={route.guide} className="font-semibold !text-brand hover:underline">
                     Read the full guide →
                   </Link>
                   {route.sources.map((s) => (

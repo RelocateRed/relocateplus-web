@@ -14,7 +14,7 @@ export default function AboutPage() {
 
       {/* Hero */}
 
-      <Section className="relative overflow-hidden bg-[#FAFBFF] pt-40">
+      <Section className="relative overflow-hidden bg-page pt-40">
 
         <div className="absolute left-1/2 top-[-350px] h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[180px]" />
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
 
           <div className="mx-auto max-w-4xl text-center">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               ABOUT RELOCATE+
             </p>
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
 
       {/* Mission */}
 
-      <Section className="bg-white">
+      <Section className="bg-surface">
 
         <Container>
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
 
             <div>
 
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
                 OUR MISSION
               </p>
 
@@ -101,13 +101,13 @@ export default function AboutPage() {
 
       {/* Vision */}
 
-      <Section className="bg-[#F8FBFF]">
+      <Section className="bg-page-alt">
 
         <Container>
 
           <div className="mx-auto max-w-4xl text-center">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               OUR VISION
             </p>
 
@@ -135,13 +135,13 @@ export default function AboutPage() {
 
       {/* Values */}
 
-      <Section className="bg-white">
+      <Section className="bg-surface">
 
         <Container>
 
           <div className="grid gap-8 md:grid-cols-3">
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-2xl font-semibold text-slate-900">
                 Simplicity
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-2xl font-semibold text-slate-900">
                 Security
@@ -171,7 +171,7 @@ export default function AboutPage() {
 
             </div>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
+            <div className="rounded-[32px] border border-slate-200 bg-surface p-8 shadow-[0_20px_60px_rgba(15,23,42,.06)]">
 
               <h3 className="text-2xl font-semibold text-slate-900">
                 Confidence

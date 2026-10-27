@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function DeleteAccountPage() {
   return (
-    <main className="min-h-screen bg-[#071426] text-white">
+    <main className="on-dark min-h-screen bg-[#071426] text-white">
       <header className="border-b border-white/10">
         <Container>
           <div className="flex h-20 items-center justify-between">

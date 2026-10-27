@@ -104,10 +104,10 @@ export default function RuleChangesPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#FAFBFF] pb-24 pt-32 lg:pt-40">
+      <main className="bg-page pb-24 pt-32 lg:pt-40">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">Updated {new Date(updated).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">Updated {new Date(updated).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>
             <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
               Visa and moving rule changes in 2026
             </h1>
@@ -118,7 +118,7 @@ export default function RuleChangesPage() {
             </p>
             <nav aria-label="Countries" className="mt-8 flex flex-wrap gap-2">
               {groups.map((g) => (
-                <a key={g.code} href={`#${g.code.toLowerCase()}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium !text-slate-700 hover:border-blue-200 hover:!text-[#2563EB]">
+                <a key={g.code} href={`#${g.code.toLowerCase()}`} className="rounded-full border border-slate-200 bg-surface px-4 py-2 text-sm font-medium !text-slate-700 hover:border-blue-200 hover:!text-brand">
                   {g.flag} {g.name}
                 </a>
               ))}
@@ -137,7 +137,7 @@ export default function RuleChangesPage() {
                       <p className="leading-7 text-slate-800">{it.text}</p>
                       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
                         {it.guides.map((gd) => (
-                          <Link key={gd.href} href={gd.href} className="font-semibold !text-[#2563EB] hover:underline">
+                          <Link key={gd.href} href={gd.href} className="font-semibold !text-brand hover:underline">
                             {gd.title} →
                           </Link>
                         ))}
@@ -163,7 +163,7 @@ export default function RuleChangesPage() {
             ))}
           </div>
 
-          <div className="mt-16 max-w-3xl rounded-[32px] border border-slate-200 bg-white p-8">
+          <div className="mt-16 max-w-3xl rounded-[32px] border border-slate-200 bg-surface p-8">
             <h2 className="text-xl font-bold text-slate-900">Not sure which visa fits you?</h2>
             <p className="mt-3 leading-7 text-slate-600">Check your income against each route's 2026 rule in our free visa finder.</p>
             <Link href="/tools/visa-finder" className="mt-5 inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white hover:bg-[#1D4ED8]">

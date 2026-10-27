@@ -138,7 +138,7 @@ export default function AppTour() {
       ref={ref}
       id="app-showcase"
       aria-label="Tour of the Relocate+ app"
-      className="relative bg-[#0B1530]"
+      className="on-dark relative bg-[#0B1530]"
       style={{ height: `${n * 100}svh` }}
     >
       {/* Scroll anchors, one per feature, so the menu links land on the right screen */}
@@ -230,7 +230,7 @@ export default function AppTour() {
                   type="button"
                   onClick={() => goTo(i)}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                    i === active ? "bg-white text-[#0B1530]" : "text-slate-400 hover:text-white"
+                    i === active ? "bg-surface text-[#0B1530]" : "text-slate-400 hover:text-white"
                   }`}
                 >
                   {f.label}

@@ -162,7 +162,7 @@ function ResetPasswordContent() {
   // ── No token in the URL at all ──────────────────────────────────────────
   if (!appUrl) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+      <div className="flex min-h-screen flex-col items-center justify-center bg-surface px-6 text-center">
         <h1 className="mb-2 text-2xl font-bold text-slate-900">
           Link expired
         </h1>
@@ -181,7 +181,7 @@ function ResetPasswordContent() {
   if (showWebForm) {
     if (!sessionReady && !sessionError) {
       return (
-        <div className="flex min-h-screen items-center justify-center bg-white">
+        <div className="flex min-h-screen items-center justify-center bg-surface">
           <div className="h-8 w-8 animate-spin rounded-full border-2 border-slate-200 border-t-[#2563EB]" />
         </div>
       );
@@ -189,7 +189,7 @@ function ResetPasswordContent() {
 
     if (sessionError) {
       return (
-        <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+        <div className="flex min-h-screen flex-col items-center justify-center bg-surface px-6 text-center">
           <h1 className="mb-2 text-2xl font-bold text-slate-900">
             Couldn&apos;t verify link
           </h1>
@@ -203,7 +203,7 @@ function ResetPasswordContent() {
 
     if (success) {
       return (
-        <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+        <div className="flex min-h-screen flex-col items-center justify-center bg-surface px-6 text-center">
           <h1 className="mb-2 text-2xl font-bold text-slate-900">
             Password updated
           </h1>
@@ -216,7 +216,7 @@ function ResetPasswordContent() {
     }
 
     return (
-      <div className="flex min-h-screen items-center justify-center bg-white px-6">
+      <div className="flex min-h-screen items-center justify-center bg-surface px-6">
         <div className="w-full max-w-sm">
           <h1 className="mb-2 text-2xl font-bold text-slate-900">
             Set a new password
@@ -304,7 +304,7 @@ function ResetPasswordContent() {
 
   // ── Default: bridging into the app ──────────────────────────────────────
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-surface px-6 text-center">
       <h1 className="mb-2 text-2xl font-bold text-slate-900">
         Opening Relocate+…
       </h1>
@@ -335,7 +335,7 @@ export default function ResetPasswordPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-screen items-center justify-center bg-white">
+        <div className="flex min-h-screen items-center justify-center bg-surface">
           <div className="h-8 w-8 animate-spin rounded-full border-2 border-slate-200 border-t-[#2563EB]" />
         </div>
       }

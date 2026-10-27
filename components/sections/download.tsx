@@ -9,7 +9,7 @@ export default function Download() {
   return (
     <Section>
       <Container>
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-[40px] bg-[#0D1B33] px-10 py-20 text-center shadow-[0_40px_120px_rgba(2,8,23,0.18)]">
+        <div className="mx-auto max-w-5xl overflow-hidden on-dark rounded-[40px] bg-[#0D1B33] px-10 py-20 text-center shadow-[0_40px_120px_rgba(2,8,23,0.18)]">
           <Heading>
             Ready to start your
             <br />

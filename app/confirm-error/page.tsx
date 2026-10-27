@@ -20,7 +20,7 @@ export default async function ConfirmErrorPage({
       : 'This confirmation link is invalid or has already been used.';
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white px-6 text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-surface px-6 text-center">
       <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-red-50">
         <span className="text-2xl text-red-500">!</span>
       </div>
@@ -38,7 +38,7 @@ export default async function ConfirmErrorPage({
 
       <a
         href="/"
-        className="rounded-xl bg-[#0A1832] px-6 py-3 font-semibold text-white hover:bg-[#152744]"
+        className="rounded-xl bg-navy px-6 py-3 font-semibold text-white hover:bg-navy-hover"
       >
         Back to homepage
       </a>

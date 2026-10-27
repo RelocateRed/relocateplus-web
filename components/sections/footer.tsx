@@ -7,7 +7,7 @@ import StoreBadges from "@/components/ui/store-badges";
 
 import Container from "@/components/ui/container";
 
-const linkClass = "text-slate-600 duration-300 hover:text-[#2563EB]";
+const linkClass = "text-slate-600 duration-300 hover:text-brand";
 
 // Same anchors as the app tour on the homepage
 const FEATURES = [
@@ -74,7 +74,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-slate-200 bg-[#F8FBFF]">
+    <footer className="border-t border-slate-200 bg-page-alt">
       <Container>
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 py-20 lg:grid-cols-[1.4fr_1fr_1.3fr_1fr_1fr] lg:gap-10">
           {/* Brand */}
@@ -104,7 +104,7 @@ export default function Footer() {
             ) : (
             <a
               href={appStoreLink("footer")}
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0B1530] px-5 py-3 text-sm font-semibold !text-white transition-colors hover:bg-[#2563EB]"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold !text-white transition-colors hover:bg-[#2563EB]"
             >
               Download on the App Store
             </a>
@@ -127,10 +127,10 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Relocate+. All rights reserved.</p>
 
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            <Link href="/privacy" className="duration-300 hover:text-[#2563EB]">Privacy</Link>
-            <Link href="/terms" className="duration-300 hover:text-[#2563EB]">Terms</Link>
-            <Link href="/delete-account" className="duration-300 hover:text-[#2563EB]">Delete Account</Link>
-            <Link href="/contact" className="duration-300 hover:text-[#2563EB]">Contact</Link>
+            <Link href="/privacy" className="duration-300 hover:text-brand">Privacy</Link>
+            <Link href="/terms" className="duration-300 hover:text-brand">Terms</Link>
+            <Link href="/delete-account" className="duration-300 hover:text-brand">Delete Account</Link>
+            <Link href="/contact" className="duration-300 hover:text-brand">Contact</Link>
           </div>
         </div>
       </Container>

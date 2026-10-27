@@ -10,7 +10,7 @@ export default function FamilyShowcase() {
   return (
     <Section
        id="family"
-       className="relative overflow-hidden py-20 lg:py-32 bg-white"
+       className="relative overflow-hidden py-20 lg:py-32 bg-surface"
 >
 
       <div className="absolute left-0 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[150px]" />
@@ -25,7 +25,7 @@ export default function FamilyShowcase() {
 
             <div className="absolute inset-0 rounded-[48px] bg-blue-500/5 blur-3xl" />
 
-            <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-white shadow-[0_40px_120px_rgba(15,23,42,.08)]">
+            <div className="relative overflow-hidden rounded-[42px] border border-slate-200 bg-surface shadow-[0_40px_120px_rgba(15,23,42,.08)]">
 
               <Image
                 src="/images/family.webp"
@@ -44,7 +44,7 @@ export default function FamilyShowcase() {
 
           <div className="order-1 lg:order-2">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">
               FAMILY TRACKING
             </p>
 
@@ -68,7 +68,7 @@ export default function FamilyShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                   👨‍👩‍👧
                 </div>
 
@@ -89,7 +89,7 @@ export default function FamilyShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                   👶
                 </div>
 
@@ -110,7 +110,7 @@ export default function FamilyShowcase() {
 
               <div className="flex gap-5">
 
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#2563EB]">
+                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-brand">
                   ✅
                 </div>
 
