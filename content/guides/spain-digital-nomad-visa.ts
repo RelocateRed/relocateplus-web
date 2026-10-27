@@ -131,7 +131,7 @@ export const spainDigitalNomadVisa: Guide = {
 
   tax: [
     {
-      text: "People who move on the international telework visa are explicitly covered by Spain's special regime for impatriated workers (the 'Beckham Law') if they weren't Spanish tax resident in the previous five tax periods. Employment income is then taxed at a flat 24% up to €600,000, for the year of the move and the next five.",
+      text: "Employees who move on the international telework visa meet the move condition of Spain's special regime for impatriated workers (the 'Beckham Law'), provided they weren't Spanish tax resident in the previous five tax periods. Employment income is then taxed at a flat 24% up to €600,000, for the year of the move and the next five.",
       sourceIds: ["aeat-impatriados"],
     },
   ],
@@ -185,7 +185,7 @@ export const spainDigitalNomadVisa: Guide = {
     },
     {
       q: "Does the Beckham Law apply to digital nomads?",
-      a: "Yes. The Spanish Tax Agency says holders of the international telework visa are covered if they weren't Spanish tax resident in the previous five tax periods.",
+      a: "For employees, yes. The Spanish Tax Agency says employed workers holding the international telework visa meet the move condition, provided they weren't Spanish tax resident in the previous five tax periods. Freelancers should check with a tax adviser.",
       sourceIds: ["aeat-impatriados"],
     },
   ],

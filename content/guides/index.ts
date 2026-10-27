@@ -21,6 +21,9 @@ import { movingAbroadWithKids } from "./moving-abroad-with-kids";
 import { spainNieNumber } from "./spain-nie-number";
 import { spainTieCard } from "./spain-tie-card";
 import { portugalNifNumber } from "./portugal-nif-number";
+import { spainEmpadronamiento } from "./spain-empadronamiento";
+import { spainBeckhamLaw } from "./spain-beckham-law";
+import { portugalIfici } from "./portugal-ifici";
 
 /**
  * To add a guide: copy an existing file in this folder, rewrite it for the
@@ -53,6 +56,10 @@ const ALL_GUIDES: Guide[] = [
   spainNieNumber,
   spainTieCard,
   portugalNifNumber,
+  // Batch 7
+  spainEmpadronamiento,
+  spainBeckhamLaw,
+  portugalIfici,
 ];
 
 validateGuides(ALL_GUIDES);
