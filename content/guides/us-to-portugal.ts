@@ -259,5 +259,5 @@ export const usToPortugal: Guide = {
 
   appPitch:
     "Relocate+ turns this checklist into a personal US → Portugal roadmap. Add your own dates — like the day your FBI check turns 90 days old or your AIMA appointment — to the deadline agenda and your calendar, track documents for every family member and keep your moving budget in one place.",
-  related: ["portugal-d8-digital-nomad-visa", "moving-from-us-to-spain", "moving-from-uk-to-spain", "fbi-background-check-apostille-for-visa"],
+  related: ["how-to-get-nif-portugal", "portugal-d8-digital-nomad-visa", "moving-from-us-to-spain", "moving-from-uk-to-spain", "fbi-background-check-apostille-for-visa"],
 };

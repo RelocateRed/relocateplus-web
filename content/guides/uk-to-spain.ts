@@ -227,5 +227,5 @@ export const ukToSpain: Guide = {
 
   appPitch:
     "Relocate+ maps your UK → Spain move step by step: put your ACRO and medical-certificate dates, padrón, TIE and the six-month licence exchange in your deadline agenda and calendar, and keep the whole family's documents in one place.",
-  related: ["spain-digital-nomad-visa", "moving-from-us-to-spain", "moving-from-us-to-portugal"],
+  related: ["how-to-get-nie-number-spain", "spain-digital-nomad-visa", "moving-from-us-to-spain", "moving-from-us-to-portugal"],
 };

@@ -201,5 +201,5 @@ export const spainDigitalNomadVisa: Guide = {
 
   appPitch:
     "Relocate+ keeps a Spain digital nomad move on track: put your visa expiry, the 60-day window to switch to a residence permit and renewal dates in the deadline agenda and calendar, and keep contracts, insurance and family documents together.",
-  related: ["moving-from-us-to-spain", "moving-from-uk-to-spain"],
+  related: ["how-to-get-nie-number-spain", "moving-from-us-to-spain", "moving-from-uk-to-spain"],
 };

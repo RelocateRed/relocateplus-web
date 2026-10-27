@@ -18,6 +18,9 @@ import { germanyOpportunityCard } from "./germany-opportunity-card";
 import { dubaiRemoteWorkVisa } from "./dubai-remote-work-visa";
 import { movingAbroadWithPets } from "./moving-abroad-with-pets";
 import { movingAbroadWithKids } from "./moving-abroad-with-kids";
+import { spainNieNumber } from "./spain-nie-number";
+import { spainTieCard } from "./spain-tie-card";
+import { portugalNifNumber } from "./portugal-nif-number";
 
 /**
  * To add a guide: copy an existing file in this folder, rewrite it for the
@@ -46,6 +49,10 @@ const ALL_GUIDES: Guide[] = [
   dubaiRemoteWorkVisa,
   movingAbroadWithPets,
   movingAbroadWithKids,
+  // Batch 6
+  spainNieNumber,
+  spainTieCard,
+  portugalNifNumber,
 ];
 
 validateGuides(ALL_GUIDES);

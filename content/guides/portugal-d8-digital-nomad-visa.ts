@@ -208,5 +208,5 @@ export const portugalD8Visa: Guide = {
 
   appPitch:
     "Relocate+ keeps your D8 timeline straight: add the police certificate's 90-day limit, your four-month visa window, the AIMA appointment and permit renewal to the deadline agenda and calendar, and keep income proof and family documents in one place.",
-  related: ["moving-from-us-to-portugal", "moving-from-uk-to-portugal", "fbi-background-check-apostille-for-visa"],
+  related: ["how-to-get-nif-portugal", "moving-from-us-to-portugal", "moving-from-uk-to-portugal", "fbi-background-check-apostille-for-visa"],
 };
