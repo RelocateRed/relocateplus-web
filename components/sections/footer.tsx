@@ -64,7 +64,13 @@ export default function Footer() {
             : g.title.split(":")[0].replace(/ 20\d\d/, "").trim(),
         href: `/guides/${g.slug}`,
       })),
-    ...(guides.length ? [{ label: "All moving guides →", href: "/guides" }] : []),
+    ...(guides.length
+      ? [
+          { label: "Visa finder (free tool)", href: "/tools/visa-finder" },
+          { label: "2026 rule changes", href: "/visa-rule-changes-2026" },
+          { label: "All moving guides →", href: "/guides" },
+        ]
+      : []),
   ];
 
   return (

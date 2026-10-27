@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    { url: `${SITE_URL}/tools/visa-finder`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/visa-rule-changes-2026`, lastModified: new Date(newest), changeFrequency: "weekly", priority: 0.7 },
     { url: `${SITE_URL}/guides`, lastModified: new Date(newest), changeFrequency: "weekly", priority: 0.8 },
     // lastModified = the date the facts were last verified, so Google sees real updates only
     ...guides.map((g) => ({

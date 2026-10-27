@@ -23,6 +23,7 @@ const FEATURES = [
 const LINKS = [
   { label: "Why Relocate+", href: "/#why-relocate", key: "why" },
   { label: "Moving guides", href: "/guides", key: "guides" },
+  { label: "Visa finder", href: "/tools/visa-finder", key: "finder" },
   { label: "FAQ", href: "/#faq", key: "faq" },
 ];
 
@@ -75,7 +76,11 @@ export default function Navbar() {
   }, [menuOpen]);
 
   const isActive = (key: string) =>
-    key === "guides" ? pathname.startsWith("/guides") : active === key;
+    key === "guides"
+      ? pathname.startsWith("/guides") || pathname.startsWith("/visa-rule-changes")
+      : key === "finder"
+        ? pathname.startsWith("/tools")
+        : active === key;
 
   const dark = onDark && !menuOpen;
   // "!" because the global a { color: inherit } rule would otherwise win
@@ -118,7 +123,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           <Link
             href={LINKS[0].href}
             className={`relative text-sm font-medium transition-colors ${isActive("why") ? linkOn : linkBase}`}
