@@ -20,7 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    { url: `${SITE_URL}/tools`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/tools/visa-finder`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/tools/schengen-calculator`, lastModified: new Date("2026-10-28"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/tools/moving-deadline-planner`, lastModified: new Date("2026-10-28"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/digital-nomad-visa-income-requirements`, lastModified: new Date("2026-10-28"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/visa-rule-changes-2026`, lastModified: new Date(newest), changeFrequency: "weekly", priority: 0.7 },
     { url: `${SITE_URL}/guides`, lastModified: new Date(newest), changeFrequency: "weekly", priority: 0.8 },
     // lastModified = the date the facts were last verified, so Google sees real updates only

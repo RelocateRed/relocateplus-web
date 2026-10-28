@@ -56,7 +56,7 @@ export default function Footer() {
   const guideLinks = [
     ...guides
       .filter((g) => g.kind !== "topic")
-      .slice(0, 5)
+      .slice(0, 4)
       .map((g) => ({
         label:
           g.kind === "route"
@@ -66,7 +66,9 @@ export default function Footer() {
       })),
     ...(guides.length
       ? [
-          { label: "Visa finder (free tool)", href: "/tools/visa-finder" },
+          { label: "Visa finder", href: "/tools/visa-finder" },
+          { label: "Schengen calculator", href: "/tools/schengen-calculator" },
+          { label: "All free tools →", href: "/tools" },
           { label: "2026 rule changes", href: "/visa-rule-changes-2026" },
           { label: "All moving guides →", href: "/guides" },
         ]

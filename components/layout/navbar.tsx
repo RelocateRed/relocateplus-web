@@ -23,7 +23,7 @@ const FEATURES = [
 const LINKS = [
   { label: "Why Relocate+", href: "/#why-relocate", key: "why" },
   { label: "Moving guides", href: "/guides", key: "guides" },
-  { label: "Visa finder", href: "/tools/visa-finder", key: "finder" },
+  { label: "Free tools", href: "/tools", key: "finder" },
   { label: "FAQ", href: "/#faq", key: "faq" },
 ];
 
@@ -79,7 +79,7 @@ export default function Navbar() {
     key === "guides"
       ? pathname.startsWith("/guides") || pathname.startsWith("/visa-rule-changes")
       : key === "finder"
-        ? pathname.startsWith("/tools")
+        ? pathname.startsWith("/tools") || pathname.startsWith("/digital-nomad-visa")
         : active === key;
 
   const dark = onDark && !menuOpen;
