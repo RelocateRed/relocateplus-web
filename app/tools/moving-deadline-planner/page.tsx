@@ -6,6 +6,7 @@ import Container from "@/components/ui/container";
 import DeadlinePlanner from "@/components/tools/deadline-planner";
 import { toScript } from "@/lib/guides/jsonld";
 import { SITE_URL, appStoreLink } from "@/lib/site";
+import AppQr from "@/components/ui/app-qr";
 
 const TITLE = "Moving to Spain or Portugal? Free 2026 Deadline Planner";
 const DESCRIPTION =
@@ -135,9 +136,12 @@ export default function DeadlinePlannerPage() {
               Relocate+ builds your full roadmap from your visa and route, syncs every deadline to your calendar, and keeps
               your documents for each step in an encrypted vault.
             </p>
-            <a href={appStoreLink("deadline-planner")} className="mt-6 inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
-              Download on the App Store
-            </a>
+            <div className="mt-6 flex flex-wrap items-center gap-8">
+              <a href={appStoreLink("deadline-planner")} className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
+                Download on the App Store
+              </a>
+              <AppQr dark />
+            </div>
           </section>
         </Container>
       </main>

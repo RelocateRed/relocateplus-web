@@ -245,6 +245,23 @@ export default function AppTour() {
               aria-hidden="true"
               className="absolute h-[70%] w-[70%] rounded-full bg-blue-500/25 blur-[90px]"
             />
+            {/* Progress dots (mobile): stacked vertically beside the phone, so they read as "scroll down" */}
+            <div className="absolute right-0 top-1/2 z-10 flex -translate-y-1/2 flex-col items-center lg:hidden">
+              {FEATURES.map((f, i) => (
+                <button
+                  key={f.id}
+                  type="button"
+                  aria-label={`Show ${f.label}`}
+                  aria-current={i === active ? "step" : undefined}
+                  onClick={() => goTo(i)}
+                  className="flex items-center justify-center p-1.5"
+                >
+                  <span
+                    className={`block w-2 rounded-full transition-all ${i === active ? "h-6 bg-[#C9A46A]" : "h-2 bg-white/25"}`}
+                  />
+                </button>
+              ))}
+            </div>
             <div className="relative h-full max-h-[min(72svh,720px)] lg:h-[min(76svh,720px)]">
               <div className="h-full rounded-[44px] bg-gradient-to-b from-slate-500/60 via-slate-700/40 to-slate-500/60 p-[3px] shadow-[0_50px_120px_rgba(0,0,0,.45)]">
                 <div className="relative h-full overflow-hidden rounded-[41px] border-[8px] border-[#05080F] bg-[#F4F3EF]" style={{ aspectRatio: "1320 / 2868" }}>
@@ -267,18 +284,6 @@ export default function AppTour() {
             </div>
           </div>
 
-          {/* Dots (mobile) */}
-          <div className="mt-4 flex justify-center gap-2 lg:hidden">
-            {FEATURES.map((f, i) => (
-              <button
-                key={f.id}
-                type="button"
-                aria-label={f.label}
-                onClick={() => goTo(i)}
-                className={`h-2 rounded-full transition-all ${i === active ? "w-6 bg-[#C9A46A]" : "w-2 bg-white/25"}`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>

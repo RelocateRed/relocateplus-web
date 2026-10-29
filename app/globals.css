@@ -172,3 +172,9 @@ section {
   --color-slate-800: #1e293b;
   --color-slate-900: #0f172a;
 }
+
+/* Only on computers with a mouse/trackpad (e.g. the App Store QR code) */
+.desktop-only { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .desktop-only { display: flex; }
+}

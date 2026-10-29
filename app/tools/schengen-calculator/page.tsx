@@ -7,6 +7,7 @@ import Container from "@/components/ui/container";
 import SchengenCalculator from "@/components/tools/schengen-calculator";
 import { toScript } from "@/lib/guides/jsonld";
 import { SITE_URL, appStoreLink } from "@/lib/site";
+import AppQr from "@/components/ui/app-qr";
 
 const TITLE = "Schengen 90/180 Calculator: How Many Days Do I Have Left?";
 const DESCRIPTION =
@@ -190,9 +191,12 @@ export default function SchengenCalculatorPage() {
               Relocate+ turns your visa into a step-by-step roadmap with every deadline in your calendar, from your
               appointment to your residence card.
             </p>
-            <a href={appStoreLink("schengen-calculator")} className="mt-6 inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
-              Download on the App Store
-            </a>
+            <div className="mt-6 flex flex-wrap items-center gap-8">
+              <a href={appStoreLink("schengen-calculator")} className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
+                Download on the App Store
+              </a>
+              <AppQr dark />
+            </div>
           </section>
         </Container>
       </main>

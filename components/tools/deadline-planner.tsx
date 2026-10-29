@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
+import AppQr from "@/components/ui/app-qr";
+import { appStoreLink } from "@/lib/site";
 import { planDeadlines, toIcs, type Country, type PlannerInput, type PortugalVisa, type SpainVisa } from "@/lib/tools/deadlines";
 
 const field =
@@ -53,6 +55,7 @@ function Check({ checked, onChange, children }: { checked: boolean; onChange: (v
 
 export default function DeadlinePlanner() {
   const [today, setToday] = useState("");
+  const [saved, setSaved] = useState(false);
   const [input, setInput] = useState<PlannerInput>({
     country: "ES",
     arrival: "",
@@ -85,6 +88,7 @@ export default function DeadlinePlanner() {
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+    setSaved(true);
   };
 
   return (
@@ -197,6 +201,25 @@ export default function DeadlinePlanner() {
                 );
               })}
             </ol>
+            {saved ? (
+              <div role="status" className="on-dark mt-6 rounded-3xl bg-[#0B1530] p-6 text-white sm:p-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-300">Saved to your calendar</p>
+                <h3 className="mt-2 text-xl font-bold">Now keep them on your phone, with the documents for each step</h3>
+                <p className="mt-3 leading-7 text-slate-300">
+                  Relocate+ puts every deadline in one agenda synced to your calendar, turns your visa into a step-by-step
+                  roadmap, and keeps the documents each step needs in an encrypted vault.
+                </p>
+                <div className="mt-5 flex flex-wrap items-center gap-8">
+                  <a
+                    href={appStoreLink("deadline-planner-saved")}
+                    className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]"
+                  >
+                    Get Relocate+ on the App Store
+                  </a>
+                  <AppQr dark />
+                </div>
+              </div>
+            ) : null}
             <p className="mt-5 text-xs leading-5 text-slate-500">
               A planning aid, not legal advice. Deadlines come from official sources linked above; your own visa and
               appointment letters always take priority.

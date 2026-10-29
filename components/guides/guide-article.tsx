@@ -3,6 +3,7 @@ import type { Guide, Source } from "@/lib/guides/types";
 import Container from "@/components/ui/container";
 import { appStoreLink, PLAY_STORE_URL, STORE_BADGES_LIVE } from "@/lib/site";
 import StoreBadges from "@/components/ui/store-badges";
+import AppQr from "@/components/ui/app-qr";
 
 /* ---------- helpers ---------- */
 
@@ -64,7 +65,7 @@ function AppBox({ guide, variant }: { guide: Guide; variant: "inline" | "end" })
         <div className="mt-5 flex flex-wrap gap-3">
           <a
             href={appStoreLink(campaign)}
-            className="inline-flex items-center justify-center rounded-2xl bg-[#2563EB] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
+            className="inline-flex items-center justify-center rounded-2xl bg-[#2563EB] px-6 py-3.5 text-sm font-semibold !text-white transition hover:bg-[#1D4ED8]"
             rel="noopener"
           >
             Download on the App Store
@@ -72,7 +73,7 @@ function AppBox({ guide, variant }: { guide: Guide; variant: "inline" | "end" })
           {PLAY_STORE_URL ? (
             <a
               href={PLAY_STORE_URL}
-              className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-surface px-6 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-[#2563EB]/40"
+              className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-surface px-6 py-3.5 text-sm font-semibold !text-slate-900 transition hover:border-[#2563EB]/40"
               rel="noopener"
             >
               Get it on Google Play
@@ -80,6 +81,7 @@ function AppBox({ guide, variant }: { guide: Guide; variant: "inline" | "end" })
           ) : null}
         </div>
       )}
+      <AppQr className="mt-6" />
     </aside>
   );
 }

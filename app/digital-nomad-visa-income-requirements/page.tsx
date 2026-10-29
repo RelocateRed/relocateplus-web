@@ -9,6 +9,7 @@ import { toScript } from "@/lib/guides/jsonld";
 import { getRates } from "@/lib/tools/rates";
 import { ROUTES } from "@/lib/tools/visa-routes";
 import { SITE_URL, appStoreLink } from "@/lib/site";
+import AppQr from "@/components/ui/app-qr";
 
 const TITLE = "Digital Nomad Visa Income Requirements 2026: Compared";
 const DESCRIPTION =
@@ -144,9 +145,12 @@ export default async function IncomeRequirementsPage() {
             <p className="mt-4 leading-7 text-slate-300">
               Relocate+ turns your visa into a roadmap with deadlines, a moving budget and an encrypted vault for every document.
             </p>
-            <a href={appStoreLink("income-requirements")} className="mt-6 inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
-              Download on the App Store
-            </a>
+            <div className="mt-6 flex flex-wrap items-center gap-8">
+              <a href={appStoreLink("income-requirements")} className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
+                Download on the App Store
+              </a>
+              <AppQr dark />
+            </div>
           </section>
         </Container>
       </main>

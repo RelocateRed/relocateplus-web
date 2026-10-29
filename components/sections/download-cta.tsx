@@ -6,6 +6,7 @@ import Section from "@/components/ui/section";
 
 import Heading from "@/components/typography/heading";
 import Text from "@/components/typography/text";
+import AppQr from "@/components/ui/app-qr";
 
 export default function DownloadCTA() {
   return (
@@ -65,6 +66,8 @@ export default function DownloadCTA() {
   
               </div>
             )}
+
+            <AppQr dark align="center" className="mt-10" />
 
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-slate-400">
 

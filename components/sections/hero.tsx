@@ -11,6 +11,7 @@ import Heading from "@/components/typography/heading";
 import Text from "@/components/typography/text";
 import FadeIn from "@/components/animations/fade-in";
 import { Float, LineReveal, PopIn } from "@/components/animations/motion";
+import AppQr from "@/components/ui/app-qr";
 
 export default function Hero() {
   return (
@@ -89,6 +90,8 @@ export default function Hero() {
                   </Button>
                 </div>
               )}
+
+              <AppQr className="mt-8" />
 
               <div className="mt-16 flex items-center gap-3">
                 <div className="text-lg text-brand">★★★★★</div>
