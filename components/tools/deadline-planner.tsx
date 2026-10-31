@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 import AppQr from "@/components/ui/app-qr";
-import { appStoreLink } from "@/lib/site";
+import AppDownload from "@/components/ui/app-download";
 import { planDeadlines, toIcs, type Country, type PlannerInput, type PortugalVisa, type SpainVisa } from "@/lib/tools/deadlines";
 
 const field =
@@ -210,12 +210,7 @@ export default function DeadlinePlanner() {
                   roadmap, and keeps the documents each step needs in an encrypted vault.
                 </p>
                 <div className="mt-5 flex flex-wrap items-center gap-8">
-                  <a
-                    href={appStoreLink("deadline-planner-saved")}
-                    className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]"
-                  >
-                    Get Relocate+ on the App Store
-                  </a>
+                  <AppDownload campaign="deadline-planner-saved" label="Get Relocate+ on the App Store" />
                   <AppQr dark />
                 </div>
               </div>

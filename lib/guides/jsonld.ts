@@ -1,5 +1,5 @@
 import type { Guide } from "./types";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, STORE_BADGES_LIVE } from "@/lib/site";
 
 /** Structured data that mirrors the visible page content exactly. */
 export function guideJsonLd(g: Guide) {
@@ -63,7 +63,7 @@ export function organizationJsonLd() {
       {
         "@type": "MobileApplication",
         name: "Relocate+",
-        operatingSystem: "iOS",
+        operatingSystem: STORE_BADGES_LIVE ? "iOS, Android" : "iOS",
         applicationCategory: "LifestyleApplication",
         description:
           "Relocation planner for international moves: personal roadmaps per country, visa and document tracking for the whole family, deadlines, a moving budget and an AI assistant.",

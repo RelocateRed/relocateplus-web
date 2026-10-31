@@ -6,8 +6,9 @@ import Footer from "@/components/sections/footer";
 import Container from "@/components/ui/container";
 import SchengenCalculator from "@/components/tools/schengen-calculator";
 import { toScript } from "@/lib/guides/jsonld";
-import { SITE_URL, appStoreLink } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import AppQr from "@/components/ui/app-qr";
+import AppDownload from "@/components/ui/app-download";
 
 const TITLE = "Schengen 90/180 Calculator: How Many Days Do I Have Left?";
 const DESCRIPTION =
@@ -192,9 +193,7 @@ export default function SchengenCalculatorPage() {
               appointment to your residence card.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-8">
-              <a href={appStoreLink("schengen-calculator")} className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]">
-                Download on the App Store
-              </a>
+              <AppDownload campaign="schengen-calculator" />
               <AppQr dark />
             </div>
           </section>

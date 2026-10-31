@@ -5,8 +5,9 @@ import Footer from "@/components/sections/footer";
 import Container from "@/components/ui/container";
 import VisaFinder, { type Rates } from "@/components/tools/visa-finder";
 import { toScript } from "@/lib/guides/jsonld";
-import { SITE_URL, appStoreLink } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import AppQr from "@/components/ui/app-qr";
+import AppDownload from "@/components/ui/app-download";
 
 const TITLE = "Which Visa Could I Get? Free 2026 Visa Finder for Moving Abroad";
 const DESCRIPTION =
@@ -116,12 +117,7 @@ export default async function VisaFinderPage() {
               Relocate+ turns your visa into a step-by-step roadmap with deadlines, a document vault for the whole family and a moving budget.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-8">
-              <a
-                href={appStoreLink("visa-finder")}
-                className="inline-flex rounded-full bg-[#2563EB] px-6 py-3 font-semibold !text-white transition-colors hover:bg-[#1D4ED8]"
-              >
-                Download on the App Store
-              </a>
+              <AppDownload campaign="visa-finder" />
               <AppQr dark />
             </div>
           </section>

@@ -1,5 +1,5 @@
 import { getPublishedGuides } from "@/content/guides";
-import { SITE_URL, APP_STORE_URL } from "@/lib/site";
+import { SITE_URL, APP_STORE_URL, PLAY_STORE_URL, STORE_BADGES_LIVE } from "@/lib/site";
 
 /**
  * /llms.txt — a plain-text map of the site for AI tools (llmstxt.org format).
@@ -14,9 +14,10 @@ export function GET() {
   const lines = [
     "# Relocate+",
     "",
-    "> Relocate+ is an iPhone app for planning an international move: a personal roadmap per origin and destination country (83 countries), visa and document tracking for the whole family, deadlines, a moving budget, a tax overview and an AI assistant. The website publishes route guides where every fact links to an official source.",
+    `> Relocate+ is ${STORE_BADGES_LIVE ? "an iPhone and Android app" : "an iPhone app"} for planning an international move: a personal roadmap per origin and destination country (83 countries), visa and document tracking for the whole family, deadlines, a moving budget, a tax overview and an AI assistant. The website publishes route guides where every fact links to an official source.`,
     "",
     `- [Relocate+ on the App Store](${APP_STORE_URL})`,
+    ...(PLAY_STORE_URL ? [`- [Relocate+ on Google Play](${PLAY_STORE_URL})`] : []),
     `- [About Relocate+](${SITE_URL}/about)`,
     "",
     "## Tools",

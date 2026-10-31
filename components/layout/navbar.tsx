@@ -6,7 +6,10 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-import { appStoreLink } from "@/lib/site";
+import { STORE_BADGES_LIVE, appStoreLink } from "@/lib/site";
+
+// After the Android launch, /download sends each device to its own store
+const downloadHref = (ct: string) => (STORE_BADGES_LIVE ? `/download?ct=${ct}` : appStoreLink(ct));
 
 // Same anchors as the app tour on the homepage. "/#..." so they also work from other pages.
 const FEATURES = [
@@ -200,7 +203,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href={appStoreLink("nav")}
+            href={downloadHref("nav")}
             className="hidden rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold !text-white shadow-[0_10px_30px_rgba(37,99,235,.35)] transition-colors hover:bg-[#1D4ED8] sm:inline-flex"
           >
             Download
@@ -274,10 +277,10 @@ export default function Navbar() {
             </div>
 
             <a
-              href={appStoreLink("nav-mobile")}
+              href={downloadHref("nav-mobile")}
               className="mt-8 flex w-full items-center justify-center rounded-full bg-[#2563EB] px-6 py-4 font-semibold !text-white"
             >
-              Download on the App Store
+              {STORE_BADGES_LIVE ? "Download the app" : "Download on the App Store"}
             </a>
           </motion.nav>
         )}
