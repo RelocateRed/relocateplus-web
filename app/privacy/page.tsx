@@ -29,7 +29,7 @@ export default function PrivacyPage() {
             </Heading>
 
             <Text className="mt-8 text-lg">
-              Last updated: July 2026
+              Last updated: November 2026
             </Text>
 
           </div>
@@ -186,6 +186,23 @@ export default function PrivacyPage() {
                     sent to the AI are processed to generate responses.
                     Conversation history is not stored beyond the
                     current session.
+                  </p>
+
+                </div>
+
+                <div>
+
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    Vercel Web Analytics (website only)
+                  </h3>
+
+                  <p className="mt-3 leading-8 text-slate-600">
+                    Our website (relocate-plus.com) uses Vercel Web
+                    Analytics to count page views. It doesn&apos;t use
+                    cookies and collects only anonymous, aggregated data
+                    such as the page visited, the referring site, country,
+                    browser and device type. It can&apos;t identify you
+                    personally.
                   </p>
 
                 </div>

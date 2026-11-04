@@ -9,9 +9,9 @@ import { getPublishedGuides } from "@/content/guides";
 import { toScript } from "@/lib/guides/jsonld";
 import { SITE_URL } from "@/lib/site";
 
-const TITLE = "Visa & Moving Rule Changes in 2026: What's New by Country";
+const TITLE = "New Visa Rules in 2026: Every Change for Spain, Portugal & More";
 const DESCRIPTION =
-  "Every 2026 rule change our moving guides track — new income thresholds, citizenship rules and closed visas — grouped by country, each with its official source.";
+  "Portugal's 10-year citizenship rule, Spain's higher income thresholds, Australia's new salary floors and more: every 2026 visa change by country, with sources.";
 const URL = `${SITE_URL}/visa-rule-changes-2026`;
 
 export const metadata: Metadata = {
@@ -109,7 +109,7 @@ export default function RuleChangesPage() {
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand">Updated {new Date(updated).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>
             <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
-              Visa and moving rule changes in 2026
+              New visa and moving rules in 2026, by country
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-600">
               Income thresholds move with minimum wages, citizenship rules get stricter and some visas close. Here are

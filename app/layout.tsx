@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import SiteAnalytics from "@/components/site-analytics";
 import { organizationJsonLd, toScript } from "@/lib/guides/jsonld";
 
 const inter = Inter({
@@ -112,6 +113,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: toScript(organizationJsonLd()) }}
         />
         {children}
+        <SiteAnalytics />
       </body>
     </html>
   );
