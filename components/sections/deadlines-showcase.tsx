@@ -16,8 +16,8 @@ export default function DeadlinesShowcase() {
       features={[
         {
           icon: "📅",
-          title: "Add to your iPhone calendar",
-          text: "Tap the calendar icon on any deadline to put it in your iPhone calendar.",
+          title: "Add to your phone's calendar",
+          text: "Tap the calendar icon on any deadline to put it in your phone's calendar.",
         },
         {
           icon: "➕",

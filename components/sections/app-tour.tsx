@@ -35,8 +35,8 @@ const FEATURES: Feature[] = [
     eyebrow: "Deadline agenda",
     title: "Every date, in one agenda.",
     intro:
-      "Your deadlines grouped into this week, this month and coming up. Tap the calendar icon to add any of them to your iPhone calendar.",
-    points: ["Add to iPhone calendar", "Add your own dates", "Straight to the task"],
+      "Your deadlines grouped into this week, this month and coming up. Tap the calendar icon to add any of them to your phone's calendar.",
+    points: ["Add to your calendar", "Add your own dates", "Straight to the task"],
     image: "/images/agenda-v3.webp",
     alt: "Relocate+ deadline agenda grouped by this week and this month",
   },

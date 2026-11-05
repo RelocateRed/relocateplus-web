@@ -10,8 +10,9 @@ export const APP_STORE_URL = "https://apps.apple.com/app/relocate-plus/id6789252
  */
 const PROVIDER_TOKEN = process.env.NEXT_PUBLIC_APP_STORE_PROVIDER_TOKEN;
 
-/** Set NEXT_PUBLIC_PLAY_STORE_URL in Vercel once the Android app is live. */
-export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || "";
+/** Google Play listing (live since 5 Nov 2026). NEXT_PUBLIC_PLAY_STORE_URL in Vercel can override it. */
+export const PLAY_STORE_URL =
+  process.env.NEXT_PUBLIC_PLAY_STORE_URL || "https://play.google.com/store/apps/details?id=com.relocateplus.app";
 
 export function appStoreLink(campaign: string): string {
   if (!PROVIDER_TOKEN) return APP_STORE_URL;
