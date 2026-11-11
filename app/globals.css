@@ -173,8 +173,10 @@ section {
   --color-slate-900: #0f172a;
 }
 
-/* Only on computers with a mouse/trackpad (e.g. the App Store QR code) */
+/* Hidden on phones; shown on tablets (iPad included) and computers (e.g. the App Store QR code).
+   Tablets: at least 744px wide and 600px tall, so phones in landscape stay excluded.
+   Computers: any window size, detected by a mouse or trackpad. */
 .desktop-only { display: none; }
-@media (hover: hover) and (pointer: fine) {
+@media (min-width: 744px) and (min-height: 600px), (hover: hover) and (pointer: fine) {
   .desktop-only { display: flex; }
 }

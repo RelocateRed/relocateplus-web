@@ -4,6 +4,7 @@ import Container from "@/components/ui/container";
 import { appStoreLink, PLAY_STORE_URL, STORE_BADGES_LIVE } from "@/lib/site";
 import StoreBadges from "@/components/ui/store-badges";
 import AppQr from "@/components/ui/app-qr";
+import { toolsForGuide } from "@/lib/guides/tool-links";
 
 /* ---------- helpers ---------- */
 
@@ -97,6 +98,7 @@ export default function GuideArticle({
 }) {
   const index = new Map<string, number>(guide.sources.map((s, i) => [s.id, i + 1]));
   const officialCount = guide.sources.filter((s) => s.official).length;
+  const tools = toolsForGuide(guide);
 
   const toc = [
     { id: "key-facts", label: "Key facts" },
@@ -375,6 +377,22 @@ export default function GuideArticle({
                 <Link href="/contact" className="text-brand hover:underline">Tell us</Link>.
               </p>
             </section>
+
+            {tools.length ? (
+              <section aria-label="Free tools for this move">
+                <h2 className="font-heading text-xl font-bold text-slate-900">Free tools for this move</h2>
+                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {tools.map((t) => (
+                    <li key={t.href}>
+                      <Link href={t.href} className="block h-full rounded-2xl border border-slate-200 px-5 py-4 transition hover:border-[#2563EB]/40">
+                        <span className="block font-semibold !text-slate-900">{t.title} →</span>
+                        <span className="mt-1 block text-sm leading-6 text-slate-600">{t.text}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
 
             {related.length ? (
               <section aria-label="Related guides">

@@ -15,7 +15,7 @@ export const spainNieNumber: Guide = {
 
   title: "How to Get an NIE Number in Spain (2026): Forms, Fee & Timing",
   description:
-    "Get your Spanish NIE from abroad or in Spain: form EX-15, the €9.84 fee (790 code 012), documents, appointments, processing times and what the NIE doesn't do.",
+    "Get your Spanish NIE from abroad or in Spain: form EX-15, the €9.84 fee (790 code 012), documents, timing, and where to find the NIE support number.",
   h1: "How to get an NIE number in Spain: the 2026 step-by-step",
 
   summary: [
@@ -112,6 +112,13 @@ export const spainNieNumber: Guide = {
         "In Spain the decision comes within five days of registration. Through a consulate it normally takes up to two weeks, and the NIE is sent by email, so include a working email address on the form.",
       sourceIds: ["one-nie", "es-manchester-nie"],
     },
+    {
+      when: "Later, when you go online",
+      title: "Find your support number (número de soporte)",
+      detail:
+        "When you register for Cl@ve, Spain's online ID system, you enter your NIE and then the support number printed on your document. On a foreigner's card (TIE) or residence permit it's on the front: the letter E followed by 8 digits, for example E87654321.",
+      sourceIds: ["aeat-soporte", "aeat-clave"],
+    },
   ],
 
   documents: [
@@ -159,6 +166,11 @@ export const spainNieNumber: Guide = {
 
   faqs: [
     {
+      q: "What is the NIE support number, and where do I find it?",
+      a: "The support number (número de soporte) is the serial number of the document that carries your NIE; Spanish online services such as Cl@ve ask for it. On a foreigner's card (TIE) or residence permit it's on the front: E plus 8 digits. On an EU citizen registration certificate it's on the back of the card; type it with a C in front and add zeros on the left to reach 8 digits, so 9999999 becomes C09999999. On older A4-size certificates it's at the top right of the front.",
+      sourceIds: ["aeat-soporte", "aeat-clave"],
+    },
+    {
       q: "How much does an NIE number cost?",
       a: "€9.84 in Spain, paid with form 790 code 012. Consulates abroad charge their own local amount — £8.45 at Spain's Manchester consulate, for example.",
       sourceIds: ["one-nie", "es-manchester-nie"],
@@ -186,6 +198,8 @@ export const spainNieNumber: Guide = {
   ],
 
   sources: [
+    { id: "aeat-soporte", title: "\"Introduzca soporte válido\": cómo introducir el número de soporte", publisher: "Agencia Tributaria (Spanish Tax Agency)", url: "https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/incidencias-tecnicas-clave-pin/introduzca-soporte-valido.html", official: true, accessed: "2026-11-11" },
+    { id: "aeat-clave", title: "Cómo solicitar la carta invitación para registrarse en Cl@ve", publisher: "Agencia Tributaria (Spanish Tax Agency)", url: "https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/solicitud-carta-invitacion-registro-clave-csv.html", official: true, accessed: "2026-11-11" },
     { id: "interior-nie", title: "Número de Identidad de Extranjero (NIE)", publisher: "Ministry of the Interior (Spain)", url: "https://www.interior.gob.es/opencms/en/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/", official: true, accessed: ACCESSED },
     { id: "one-nie", title: "Application for NIE for international individuals", publisher: "Spanish government (one.gob.es)", url: "https://www.one.gob.es/en/procedures/application-nie-international-individuals", official: true, accessed: ACCESSED },
     { id: "es-manchester-nie", title: "NIE (Foreigner Identity Number)", publisher: "Consulate General of Spain in Manchester", url: "https://www.exteriores.gob.es/Consulados/manchester/en/ServiciosConsulares/Paginas/Consular/NIE.aspx", official: true, accessed: ACCESSED },

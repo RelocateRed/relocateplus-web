@@ -12,9 +12,9 @@ export const thailandDtv: Guide = {
   toName: "Thailand",
   kind: "visa",
 
-  title: "Thailand DTV Visa 2026: Requirements & New Rules",
+  title: "Thailand DTV Visa 2026: Requirements, Cost & New Rules",
   description:
-    "Destination Thailand Visa for digital nomads: 500,000 THB funds, the new 31 Aug 2026 police-check and residence rules, 180-day stays, fees and taxes.",
+    "Destination Thailand Visa in 2026: 500,000 THB funds, fees (US$400, £300), the 31 Aug 2026 police-check and residence rules, 180-day stays and tax.",
   h1: "Thailand's Destination Thailand Visa (DTV): 2026 requirements for digital nomads",
 
   summary: [
@@ -64,6 +64,10 @@ export const thailandDtv: Guide = {
   ],
 
   recentChanges: [
+    {
+      text: "Requirements aren't identical everywhere. Washington asks for an FBI certificate issued within three months, while London accepts a police clearance certificate, such as ACRO, issued within 6 months of your application.",
+      sourceIds: ["th-dc-dtv", "th-uk-dtv"],
+    },
     {
       text: "For applications submitted from 31 August 2026, Thai missions require a criminal record clearance certificate and proof of permanent residence (for example, the Washington embassy asks for an FBI certificate issued within three months, and a green card or valid US visa for non-citizens).",
       sourceIds: ["lexbangkok-dtv", "th-dc-dtv", "th-la-dtv"],
@@ -133,6 +137,7 @@ export const thailandDtv: Guide = {
 
   costs: [
     { item: "DTV visa fee — Royal Thai Embassy, Washington DC", amount: "US$400", sourceIds: ["th-dc-dtv"] },
+    { item: "DTV visa fee — Royal Thai Embassy, London", amount: "£300", note: "For residents of the UK, Ireland and the British Overseas Territories.", sourceIds: ["th-uk-dtv"] },
     { item: "DTV visa fee — Royal Thai Embassy, Bern", amount: "CHF 350", note: "Each embassy sets the fee in local currency.", sourceIds: ["th-ch-dtv"] },
     { item: "Funds you must hold (not a fee)", amount: "≥ 500,000 THB", sourceIds: ["th-dc-dtv"] },
   ],
@@ -178,6 +183,16 @@ export const thailandDtv: Guide = {
 
   faqs: [
     {
+      q: "How much does the Thailand DTV visa cost in 2026?",
+      a: "It depends on the embassy, because each one charges in local currency: US$400 at the Royal Thai Embassy in Washington DC, £300 in London and CHF 350 in Bern. On top of the fee you have to show at least 500,000 THB in funds, which London puts at £12,000. That money is shown, not paid.",
+      sourceIds: ["th-dc-dtv", "th-uk-dtv", "th-ch-dtv"],
+    },
+    {
+      q: "Can I apply for the DTV from the UK or Ireland?",
+      a: "Yes, through the Royal Thai Embassy in London. It asks for proof of permanent residence in the UK, Ireland or the British Overseas Territories, funds of at least £12,000 (500,000 THB) and a police clearance certificate issued within 6 months of applying, such as the UK's ACRO certificate or the Irish police certificate. The fee is £300.",
+      sourceIds: ["th-uk-dtv"],
+    },
+    {
       q: "How much money do I need for the Thailand DTV?",
       a: "At least 500,000 THB, shown as the ending balance on each of your last three monthly bank statements. The Thai Embassy in Washington puts this at about US$16,000. A sponsorship letter can be used instead of your own statements.",
       sourceIds: ["th-dc-dtv"],
@@ -207,6 +222,7 @@ export const thailandDtv: Guide = {
   sources: [
     { id: "th-dc-dtv", title: "Destination Thailand Visa (DTV) (updated 10 Sep 2026)", publisher: "Royal Thai Embassy, Washington D.C.", url: "https://washingtondc.thaiembassy.org/en/page/dtv-visa", official: true, accessed: ACCESSED },
     { id: "th-la-dtv", title: "Destination Thailand Visa (DTV) (updated 1 Oct 2026)", publisher: "Royal Thai Consulate-General, Los Angeles", url: "https://thaiconsulatela.thaiembassy.org/en/publicservice/dtv-visa", official: true, accessed: ACCESSED },
+    { id: "th-uk-dtv", title: "Destination Thailand Visa (updated 8 Sep 2026)", publisher: "Royal Thai Embassy, London", url: "https://london.thaiembassy.org/en/page/destination-thailand-visa", official: true, accessed: "2026-11-11" },
     { id: "th-ch-dtv", title: "Destination Thailand Visa (DTV)", publisher: "Royal Thai Embassy, Bern", url: "https://www.thaiembassy.ch/Content/Embassy/217.html", official: true, accessed: ACCESSED },
     { id: "lexbangkok-dtv", title: "Destination Thailand Visa: new rules from 31 August 2026", publisher: "Lex Bangkok", url: "https://lexbangkok.com/destination-thailand-visa-dtv/", official: false, accessed: ACCESSED },
     { id: "uw-tdac", title: "Thailand introduces mandatory digital arrival card (from 1 May 2025)", publisher: "Universal Weather & Aviation", url: "https://www.universalweather.com/blog/thailand-introduces-mandatory-digital-arrival-card-for-all-foreign-nationals-effective-may-1-2025/", official: false, accessed: ACCESSED },

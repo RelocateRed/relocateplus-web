@@ -28,6 +28,9 @@ import { netherlandsBsn } from "./netherlands-bsn";
 import { germanyAnmeldung } from "./germany-anmeldung";
 import { portugalAimaPermit } from "./portugal-aima-residence-permit";
 import { spainNonLucrativeVisa } from "./spain-non-lucrative-visa";
+import { ukReturnFromSpainPortugal } from "./uk-return-from-spain-portugal";
+import { portugalAfterBrexit } from "./portugal-after-brexit";
+import { spainAfterBrexit } from "./spain-after-brexit";
 
 /**
  * To add a guide: copy an existing file in this folder, rewrite it for the
@@ -69,6 +72,10 @@ const ALL_GUIDES: Guide[] = [
   portugalAimaPermit,
   germanyAnmeldung,
   netherlandsBsn,
+  // Batch 9: Brits after Brexit, and moving back
+  ukReturnFromSpainPortugal,
+  portugalAfterBrexit,
+  spainAfterBrexit,
 ];
 
 validateGuides(ALL_GUIDES);

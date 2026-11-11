@@ -119,6 +119,7 @@ export const portugalD8Visa: Guide = {
     { item: "Police certificate, apostilled, issued within 90 days", sourceIds: ["vfs-remote", "vfs-uk-remote"] },
     { item: "Travel insurance covering medical care and repatriation", sourceIds: ["vfs-remote", "vfs-uk-remote"] },
     { item: "Signed statement about why Portugal and where you'll live", sourceIds: ["vfs-remote"] },
+    { item: "Proof of accommodation in Portugal, where your consulate asks for it: deeds, long-term lease or a host's term of responsibility", sourceIds: ["vfs-uk-remote-2025", "vfs-manchester"] },
   ],
 
   costs: [
@@ -145,6 +146,10 @@ export const portugalD8Visa: Guide = {
 
   pitfalls: [
     {
+      text: "Assuming a hotel booking will do. The UK checklists ask for property deeds, a long-term rental agreement or a host's notarised term of responsibility, and after you arrive AIMA wants a signed declaration of your address with the landlord's declaration or the land registry certificate.",
+      sourceIds: ["vfs-uk-remote-2025", "vfs-manchester", "aima-remote"],
+    },
+    {
       text: "Quoting last year's figure. Many sites still show the threshold based on the 2025 minimum wage of €870; for 2026 it's €3,680.",
       sourceIds: ["pt-min-wage-2026", "vfs-remote"],
     },
@@ -163,6 +168,11 @@ export const portugalD8Visa: Guide = {
   ],
 
   faqs: [
+    {
+      q: "Do I need a lease in Portugal for the D8 visa?",
+      a: "It depends on where you apply. The checklist used by Portugal's consulates in the UK asks for proof of accommodation in Portugal for the 120 days of the visa: property deeds in your name, a long-term rental agreement, or a term of responsibility signed by a host with a notarised signature. The Manchester checklist specifies a 12-month rental agreement. The US checklist doesn't list a lease as a separate document; it asks you to describe your accommodation (rental, purchase or family home) in your personal statement.",
+      sourceIds: ["vfs-uk-remote-2025", "vfs-manchester", "vfs-remote"],
+    },
     {
       q: "How much income do I need for Portugal's D8 visa in 2026?",
       a: "An average of at least €3,680 a month over the last three months, which is four times Portugal's 2026 minimum wage of €920. Some consulates, such as VFS UK, also ask for a bank balance of at least €920.",
@@ -194,6 +204,8 @@ export const portugalD8Visa: Guide = {
     { id: "vfs-remote", title: "Residency visa for remote work – \"Digital Nomads\" (USA checklist, 06.11.2025)", publisher: "VFS Global for the Consulates of Portugal in the USA", url: "https://www.vfsglobal.com/one-pager/portugal/usa/english/pdf/residency-visa-for-remote-work-digital-nomads-nov-25-national.pdf", official: true, accessed: ACCESSED },
     { id: "vfs-remote-temp", title: "Temporary stay visa for remote work (USA checklist)", publisher: "VFS Global for the Consulates of Portugal in the USA", url: "https://www.vfsglobal.com/one-pager/portugal/usa/english/pdf/temporary-stay-visa-for-remote-work-digital-nomads.pdf", official: true, accessed: ACCESSED },
     { id: "vfs-uk-remote", title: "Residence visa for professional activity done remotely — digital nomads (UK checklist)", publisher: "VFS Global for the Consulates of Portugal in the UK", url: "https://www.vfsglobal.com/one-pager/portugal/uk/english/pdf/D9-RESIDENCE-VISA-FOR-PROFESSIONAL-ACTIVITY-DONE-REMOTELY-DIGITAL-NOMADS.pdf", official: true, accessed: ACCESSED },
+    { id: "vfs-uk-remote-2025", title: "D9 Residence visa for the exercise of a professional activity done remotely (UK checklist, March 2025)", publisher: "VFS Global for the Consulates of Portugal in the UK", url: "https://www.vfsglobal.com/one-pager/portugal/uk/english/pdf/D9-Residence-Visa-For-The-Exercise-Of-A-Professional-Activity-Done-Remotely-Digital-Nomads-March-2025.pdf", official: true, accessed: "2026-11-11" },
+    { id: "vfs-manchester", title: "Residency visa for remote work: Consulate General in Manchester checklist (28.12.2023)", publisher: "VFS Global for the Consulate General of Portugal in Manchester", url: "https://www.vfsglobal.com/one-pager/portugal/uk/english/pdf/DR-CGMANCHESTER-CHECKLIST-EN-New.pdf", official: true, accessed: "2026-11-11" },
     { id: "aima-remote", title: "Residence permit for remote professional activity (\"digital nomads\")", publisher: "AIMA", url: "https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-o-exercicio-de-atividade-profissional-prestada-de-forma-remota-com-visto-de-residencia-para-o-exe", official: true, accessed: ACCESSED },
     { id: "eportugal-visas", title: "Visas and permits to enter and live in Portugal", publisher: "ePortugal (Government of Portugal)", url: "https://eportugal.gov.pt/en/migrantes-viver-e-trabalhar-em-portugal/migrantes-vistos-e-autorizacoes-para-entrar-e-viver-em-portugal", official: true, accessed: ACCESSED },
     { id: "govpt-visa-fee", title: "Residence visa application fee", publisher: "gov.pt", url: "https://www2.gov.pt/en/servicos/pedir-um-visto-de-residencia-para-reagrupamento-familiar", official: true, accessed: ACCESSED },

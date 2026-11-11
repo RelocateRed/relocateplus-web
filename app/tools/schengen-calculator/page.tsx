@@ -9,12 +9,16 @@ import { toScript } from "@/lib/guides/jsonld";
 import { SITE_URL } from "@/lib/site";
 import AppQr from "@/components/ui/app-qr";
 import AppDownload from "@/components/ui/app-download";
+import EmbedCode from "@/components/tools/embed-code";
 
 const TITLE = "Schengen 90/180 Calculator: How Many Days Do I Have Left?";
 const DESCRIPTION =
   "Free Schengen calculator: add your trips and see how many of your 90 days you've used in the last 180, and how long you can stay on your next trip.";
 const URL = `${SITE_URL}/tools/schengen-calculator`;
 const CHECKED = "2026-10-28";
+
+const EMBED_CODE = `<iframe src="${SITE_URL}/embed/schengen-calculator" title="Schengen 90/180 calculator" width="100%" height="900" style="border:1px solid #e2e8f0;border-radius:16px" loading="lazy"></iframe>
+<p style="font-size:14px">Schengen calculator by <a href="${URL}">Relocate+</a></p>`;
 
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | Relocate+` },
@@ -184,6 +188,15 @@ export default function SchengenCalculatorPage() {
                 </details>
               ))}
             </div>
+          </section>
+
+          <section id="embed" className="mt-16 max-w-3xl">
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Add this calculator to your website</h2>
+            <p className="mt-4 leading-8 text-slate-600">
+              Run a travel blog, an expat forum or a relocation business? You can show this calculator on your own site
+              for free. Copy the code below and paste it into your page as HTML. It always uses the current version.
+            </p>
+            <EmbedCode code={EMBED_CODE} />
           </section>
 
           <section className="on-dark mt-16 max-w-3xl rounded-[32px] bg-[#0B1530] p-8 text-white sm:p-10">
