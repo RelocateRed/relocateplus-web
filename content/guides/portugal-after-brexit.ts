@@ -4,7 +4,8 @@ const ACCESSED = "2026-11-11";
 
 export const portugalAfterBrexit: Guide = {
   slug: "living-in-portugal-after-brexit",
-  status: "draft",
+  status: "published",
+  datePublished: "2026-11-11",
   fromCode: "GB",
   toCode: "PT",
   fromName: "the UK",
