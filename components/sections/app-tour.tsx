@@ -26,7 +26,7 @@ const FEATURES: Feature[] = [
     intro:
       "Relocate+ builds a roadmap from your destination, visa type and situation, and guides you step by step until you're settled.",
     points: ["Tailored to your move", "Grouped by phase", "Clear progress"],
-    image: "/images/roadmap-v3.webp",
+    image: "/images/roadmap-v4.webp",
     alt: "Relocate+ roadmap with tasks grouped by phase",
   },
   {
@@ -35,10 +35,10 @@ const FEATURES: Feature[] = [
     eyebrow: "Deadline agenda",
     title: "Every date, in one agenda.",
     intro:
-      "Your deadlines grouped into this week, this month and coming up. Tap the calendar icon to add any of them to your phone's calendar.",
-    points: ["Add to your calendar", "Add your own dates", "Straight to the task"],
-    image: "/images/agenda-v3.webp",
-    alt: "Relocate+ deadline agenda grouped by this week and this month",
+      "Every deadline in date order, as a list or a month view. Add them all to your phone's calendar, each with a reminder the day before.",
+    points: ["List or month view", "Add your own dates", "Reminder the day before"],
+    image: "/images/agenda-v4.webp",
+    alt: "Relocate+ agenda listing deadlines by month, with a list and month view",
   },
   {
     id: "documents",
@@ -46,9 +46,9 @@ const FEATURES: Feature[] = [
     eyebrow: "Secure document vault",
     title: "Every document, in one vault.",
     intro:
-      "See exactly which documents your move needs and upload them as you go. Everything is encrypted and only you can access your files.",
-    points: ["Encrypted and private", "Required items flagged", "Progress at a glance"],
-    image: "/images/documents-v3.webp",
+      "See which documents your next steps need right now, and upload them as you go. The vault opens with your own code, and only you can see your files.",
+    points: ["Encrypted and private", "What's needed now", "Progress at a glance"],
+    image: "/images/documents-v4.webp",
     alt: "Relocate+ encrypted document vault with required documents",
   },
   {
@@ -57,10 +57,10 @@ const FEATURES: Feature[] = [
     eyebrow: "Budget",
     title: "Know what your move will cost.",
     intro:
-      "Starting estimates for your route, from visa fees to deposits and flights, that you adjust to your situation. Then track what you actually spend.",
-    points: ["Rough starting estimates", "Track actual spend", "Add your own costs"],
-    image: "/images/budget-v3.webp",
-    alt: "Relocate+ moving budget with estimated costs by category",
+      "Starting estimates for your route, from paperwork to housing and travel, that you adjust to your situation. Tick costs off when they're paid and see how much to save each month.",
+    points: ["Starting estimates", "Monthly savings target", "Tick off what's paid"],
+    image: "/images/budget-v4.webp",
+    alt: "Relocate+ moving budget showing what is paid, saved and still needed",
   },
   {
     id: "tax",
@@ -69,8 +69,8 @@ const FEATURES: Feature[] = [
     title: "Tax on both sides, explained.",
     intro:
       "How tax works in the country you're moving to, and what to sort out in the one you're leaving. Explanations with official links, not tax advice.",
-    points: ["Moving to and leaving", "Special regimes explained", "Links to official sources"],
-    image: "/images/tax-v3.webp",
+    points: ["Moving to and leaving", "What people often miss", "Special regimes explained"],
+    image: "/images/tax-v4.webp",
     alt: "Relocate+ tax guide for moving to Spain",
   },
   {
@@ -81,7 +81,7 @@ const FEATURES: Feature[] = [
     intro:
       "Add your partner and children. Each person gets their own checklist, including child items like school records and parental consent letters.",
     points: ["A checklist per person", "Child-specific items", "See who's ready"],
-    image: "/images/family-v3.webp",
+    image: "/images/family-v4.webp",
     alt: "Relocate+ family document checklists for a partner and child",
     link: { href: "/guides/moving-abroad-with-kids", label: "Moving abroad with kids: our guide" },
   },
@@ -93,7 +93,7 @@ const FEATURES: Feature[] = [
     intro:
       "Add each pet and get its own checklist for microchips, vaccinations and travel papers, with when to start every step.",
     points: ["Start dates per step", "Critical steps flagged", "One checklist per pet"],
-    image: "/images/pets-v3.webp",
+    image: "/images/pets-v4.webp",
     alt: "Relocate+ pet checklist with microchip and rabies steps",
     link: { href: "/guides/moving-abroad-with-a-dog-or-cat", label: "Moving abroad with a pet: our guide" },
   },
@@ -103,9 +103,9 @@ const FEATURES: Feature[] = [
     eyebrow: "AI assistant",
     title: "Answers for your exact move.",
     intro:
-      "Ask about visas, deadlines, taxes, housing or banking. The assistant already knows where you're moving from and to.",
-    points: ["Knows your route", "Suggested questions", "Pick up where you left off"],
-    image: "/images/ai-v3.webp",
+      "Ask about visas, deadlines, taxes, housing or banking. The assistant already knows your route, your move date and who's coming. Snap a letter to have it explained, or get an email written in the local language.",
+    points: ["Knows your move", "Explains letters", "Writes emails for you"],
+    image: "/images/ai-v4.webp",
     alt: "Relocate+ AI assistant for your move",
   },
 ];
@@ -264,7 +264,7 @@ export default function AppTour() {
             </div>
             <div className="relative h-full max-h-[min(72svh,720px)] lg:h-[min(76svh,720px)]">
               <div className="h-full rounded-[44px] bg-gradient-to-b from-slate-500/60 via-slate-700/40 to-slate-500/60 p-[3px] shadow-[0_50px_120px_rgba(0,0,0,.45)]">
-                <div className="relative h-full overflow-hidden rounded-[41px] border-[8px] border-[#05080F] bg-[#F4F3EF]" style={{ aspectRatio: "1320 / 2868" }}>
+                <div className="relative h-full overflow-hidden rounded-[41px] border-[8px] border-[#05080F] bg-[#F4F3EF]" style={{ aspectRatio: "780 / 1695" }}>
                   <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[1.3%] z-10 h-[3.4%] w-[29%] -translate-x-1/2 rounded-full bg-black" />
                   {FEATURES.map((f, i) => (
                     <Image

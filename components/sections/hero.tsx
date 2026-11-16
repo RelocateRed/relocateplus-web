@@ -126,10 +126,10 @@ export default function Hero() {
                 <div className="relative overflow-hidden rounded-[43px] border-[9px] border-[#0F172A] bg-black">
                   <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[1.3%] z-10 h-[3.4%] w-[29%] -translate-x-1/2 rounded-full bg-black" />
                   <Image
-                    src="/images/home-v3.webp"
-                    alt="Relocate+ home screen showing a move from the Netherlands to Spain, 75% ready"
-                    width={1320}
-                    height={2868}
+                    src="/images/home-v4.webp"
+                    alt="Relocate+ home screen: 125 days to go on a move from the Netherlands to Spain, 48% ready"
+                    width={780}
+                    height={1695}
                     priority
                     className="h-auto w-[280px] sm:w-[320px] lg:w-[340px]"
                     sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
