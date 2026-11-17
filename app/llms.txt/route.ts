@@ -14,7 +14,7 @@ export function GET() {
   const lines = [
     "# Relocate+",
     "",
-    `> Relocate+ is ${STORE_BADGES_LIVE ? "an iPhone and Android app" : "an iPhone app"} for planning an international move: a personal roadmap per origin and destination country (83 countries), visa and document tracking for the whole family, deadlines, a moving budget, a tax overview and an AI assistant. The website publishes route guides where every fact links to an official source.`,
+    `> Relocate+ is ${STORE_BADGES_LIVE ? "an iPhone and Android app" : "an iPhone app"} for planning an international move: a personal roadmap per origin and destination country (84 countries), visa and document tracking for the whole family, deadlines, a moving budget, a tax overview and an AI assistant. The website publishes route guides where every fact links to an official source.`,
     "",
     `- [Relocate+ on the App Store](${APP_STORE_URL})`,
     ...(PLAY_STORE_URL ? [`- [Relocate+ on Google Play](${PLAY_STORE_URL})`] : []),
