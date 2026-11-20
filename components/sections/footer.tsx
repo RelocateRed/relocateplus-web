@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getPublishedGuides } from "@/content/guides";
 import { STORE_BADGES_LIVE, appStoreLink } from "@/lib/site";
 import StoreBadges from "@/components/ui/store-badges";
+import CookieSettingsLink from "@/components/consent/cookie-settings-link";
 
 import Container from "@/components/ui/container";
 
@@ -133,6 +134,7 @@ export default function Footer() {
             <Link href="/terms" className="duration-300 hover:text-brand">Terms</Link>
             <Link href="/delete-account" className="duration-300 hover:text-brand">Delete Account</Link>
             <Link href="/contact" className="duration-300 hover:text-brand">Contact</Link>
+            <CookieSettingsLink className="duration-300 hover:text-brand" />
           </div>
         </div>
       </Container>

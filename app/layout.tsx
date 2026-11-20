@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import SiteAnalytics from "@/components/site-analytics";
+import GoogleAds from "@/components/consent/google-ads";
 import { organizationJsonLd, toScript } from "@/lib/guides/jsonld";
 
 const inter = Inter({
@@ -114,6 +115,7 @@ export default function RootLayout({
         />
         {children}
         <SiteAnalytics />
+        <GoogleAds />
       </body>
     </html>
   );

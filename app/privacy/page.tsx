@@ -207,6 +207,29 @@ export default function PrivacyPage() {
 
                 </div>
 
+                <div id="cookies">
+
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    Google Ads (website only)
+                  </h3>
+
+                  <p className="mt-3 leading-8 text-slate-600">
+                    We advertise on Google Search. Our website uses the
+                    Google Ads tag to see whether someone who clicked one of
+                    our ads went on to tap a download button for the App
+                    Store or Google Play. Google Ads cookies are only set
+                    after you click &quot;Accept&quot; in the cookie banner.
+                    If you don&apos;t accept, the tag sends Google only
+                    limited signals without cookies, such as that a page was
+                    visited or a download button was tapped, and these are
+                    not linked to you. You can change your choice at any time
+                    with &quot;Cookie settings&quot; at the bottom of every
+                    page. Google processes this data under its own privacy
+                    policy at policies.google.com/privacy.
+                  </p>
+
+                </div>
+
               </div>
 
             </section>
